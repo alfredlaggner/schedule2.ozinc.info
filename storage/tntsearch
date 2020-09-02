@@ -1,0 +1,207 @@
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'AppAgedReceivablesTotals' not found
+
+  at /home/forge/schedule.ozinc.info/vendor/teamtnt/laravel-scout-tntsearch-driver/src/Console/ImportCommand.php:37
+    33|     public function handle(Dispatcher $events)
+    34|     {
+    35|         $class = $this->argument('model');
+    36| 
+  > 37|         $model = new $class();
+    38|         $tnt = new TNTSearch();
+    39|         $driver = $model->getConnectionName() ?: config('database.default');
+    40|         $config = config('scout.tntsearch') + config("database.connections.$driver");
+    41|         $db = app('db')->connection($driver);
+
+  Exception trace:
+
+  1   TeamTNT\Scout\Console\ImportCommand::handle(Object(Illuminate\Events\Dispatcher))
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  2   call_user_func_array()
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'AppAgedReceivablesTotals' not found
+
+  at /home/forge/schedule.ozinc.info/vendor/teamtnt/laravel-scout-tntsearch-driver/src/Console/ImportCommand.php:37
+    33|     public function handle(Dispatcher $events)
+    34|     {
+    35|         $class = $this->argument('model');
+    36| 
+  > 37|         $model = new $class();
+    38|         $tnt = new TNTSearch();
+    39|         $driver = $model->getConnectionName() ?: config('database.default');
+    40|         $config = config('scout.tntsearch') + config("database.connections.$driver");
+    41|         $db = app('db')->connection($driver);
+
+  Exception trace:
+
+  1   TeamTNT\Scout\Console\ImportCommand::handle(Object(Illuminate\Events\Dispatcher))
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  2   call_user_func_array()
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'AppAgedReceivablesTotals' not found
+
+  at /home/forge/schedule.ozinc.info/vendor/teamtnt/laravel-scout-tntsearch-driver/src/Console/ImportCommand.php:37
+    33|     public function handle(Dispatcher $events)
+    34|     {
+    35|         $class = $this->argument('model');
+    36| 
+  > 37|         $model = new $class();
+    38|         $tnt = new TNTSearch();
+    39|         $driver = $model->getConnectionName() ?: config('database.default');
+    40|         $config = config('scout.tntsearch') + config("database.connections.$driver");
+    41|         $db = app('db')->connection($driver);
+
+  Exception trace:
+
+  1   TeamTNT\Scout\Console\ImportCommand::handle(Object(Illuminate\Events\Dispatcher))
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  2   call_user_func_array()
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'AppAgedReceivablesTotals' not found
+
+  at /home/forge/schedule.ozinc.info/vendor/teamtnt/laravel-scout-tntsearch-driver/src/Console/ImportCommand.php:37
+    33|     public function handle(Dispatcher $events)
+    34|     {
+    35|         $class = $this->argument('model');
+    36| 
+  > 37|         $model = new $class();
+    38|         $tnt = new TNTSearch();
+    39|         $driver = $model->getConnectionName() ?: config('database.default');
+    40|         $config = config('scout.tntsearch') + config("database.connections.$driver");
+    41|         $db = app('db')->connection($driver);
+
+  Exception trace:
+
+  1   TeamTNT\Scout\Console\ImportCommand::handle(Object(Illuminate\Events\Dispatcher))
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  2   call_user_func_array()
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'AppAgedReceivablesTotals' not found
+
+  at /home/forge/schedule.ozinc.info/vendor/teamtnt/laravel-scout-tntsearch-driver/src/Console/ImportCommand.php:37
+    33|     public function handle(Dispatcher $events)
+    34|     {
+    35|         $class = $this->argument('model');
+    36| 
+  > 37|         $model = new $class();
+    38|         $tnt = new TNTSearch();
+    39|         $driver = $model->getConnectionName() ?: config('database.default');
+    40|         $config = config('scout.tntsearch') + config("database.connections.$driver");
+    41|         $db = app('db')->connection($driver);
+
+  Exception trace:
+
+  1   TeamTNT\Scout\Console\ImportCommand::handle(Object(Illuminate\Events\Dispatcher))
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  2   call_user_func_array()
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'AppAgedReceivablesTotals' not found
+
+  at /home/forge/schedule.ozinc.info/vendor/teamtnt/laravel-scout-tntsearch-driver/src/Console/ImportCommand.php:37
+    33|     public function handle(Dispatcher $events)
+    34|     {
+    35|         $class = $this->argument('model');
+    36| 
+  > 37|         $model = new $class();
+    38|         $tnt = new TNTSearch();
+    39|         $driver = $model->getConnectionName() ?: config('database.default');
+    40|         $config = config('scout.tntsearch') + config("database.connections.$driver");
+    41|         $db = app('db')->connection($driver);
+
+  Exception trace:
+
+  1   TeamTNT\Scout\Console\ImportCommand::handle(Object(Illuminate\Events\Dispatcher))
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  2   call_user_func_array()
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'AppAgedReceivablesTotals' not found
+
+  at /home/forge/schedule.ozinc.info/vendor/teamtnt/laravel-scout-tntsearch-driver/src/Console/ImportCommand.php:37
+    33|     public function handle(Dispatcher $events)
+    34|     {
+    35|         $class = $this->argument('model');
+    36| 
+  > 37|         $model = new $class();
+    38|         $tnt = new TNTSearch();
+    39|         $driver = $model->getConnectionName() ?: config('database.default');
+    40|         $config = config('scout.tntsearch') + config("database.connections.$driver");
+    41|         $db = app('db')->connection($driver);
+
+  Exception trace:
+
+  1   TeamTNT\Scout\Console\ImportCommand::handle(Object(Illuminate\Events\Dispatcher))
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  2   call_user_func_array()
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'AppAgedReceivablesTotals' not found
+
+  at /home/forge/schedule.ozinc.info/vendor/teamtnt/laravel-scout-tntsearch-driver/src/Console/ImportCommand.php:37
+    33|     public function handle(Dispatcher $events)
+    34|     {
+    35|         $class = $this->argument('model');
+    36| 
+  > 37|         $model = new $class();
+    38|         $tnt = new TNTSearch();
+    39|         $driver = $model->getConnectionName() ?: config('database.default');
+    40|         $config = config('scout.tntsearch') + config("database.connections.$driver");
+    41|         $db = app('db')->connection($driver);
+
+  Exception trace:
+
+  1   TeamTNT\Scout\Console\ImportCommand::handle(Object(Illuminate\Events\Dispatcher))
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  2   call_user_func_array()
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.
+
+   Symfony\Component\Debug\Exception\FatalThrowableError  : Class 'AppAgedReceivablesTotals' not found
+
+  at /home/forge/schedule.ozinc.info/vendor/teamtnt/laravel-scout-tntsearch-driver/src/Console/ImportCommand.php:37
+    33|     public function handle(Dispatcher $events)
+    34|     {
+    35|         $class = $this->argument('model');
+    36| 
+  > 37|         $model = new $class();
+    38|         $tnt = new TNTSearch();
+    39|         $driver = $model->getConnectionName() ?: config('database.default');
+    40|         $config = config('scout.tntsearch') + config("database.connections.$driver");
+    41|         $db = app('db')->connection($driver);
+
+  Exception trace:
+
+  1   TeamTNT\Scout\Console\ImportCommand::handle(Object(Illuminate\Events\Dispatcher))
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  2   call_user_func_array()
+      /home/forge/schedule.ozinc.info/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:32
+
+  Please use the argument -v to see more details.

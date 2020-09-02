@@ -1,0 +1,28 @@
+ii  php-common                       2:69+ubuntu18.04.1+deb.sury.org+2+php7.3                 all          Common files for PHP packages
+ii  php-igbinary                     2.0.8-1+ubuntu18.04.1+deb.sury.org+1                     amd64        igbinary PHP serializer
+ii  php-memcached                    3.1.3+2.2.0-1+ubuntu18.04.1+deb.sury.org+1               amd64        memcached extension module for PHP, uses libmemcached
+ii  php-msgpack                      2.0.3+0.5.7-1+ubuntu18.04.1+deb.sury.org+1               amd64        PHP extension for interfacing with MessagePack
+ii  php-pear                         1:1.10.8+submodules+notgz-1+ubuntu18.04.1+deb.sury.org+1 all          PEAR Base System
+ii  php-xmlrpc                       2:7.3+69+ubuntu18.04.1+deb.sury.org+2+php7.3             all          XMLRPC-EPI module for PHP [default]
+ii  php7.2-bcmath                    7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        Bcmath module for PHP
+ii  php7.2-cli                       7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        command-line interpreter for the PHP scripting language
+ii  php7.2-common                    7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        documentation, examples and common module for PHP
+ii  php7.2-curl                      7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        CURL module for PHP
+ii  php7.2-dev                       7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        Files for PHP7.2 module development
+ii  php7.2-fpm                       7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        server-side, HTML-embedded scripting language (FPM-CGI binary)
+ii  php7.2-gd                        7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        GD module for PHP
+ii  php7.2-imap                      7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        IMAP module for PHP
+ii  php7.2-intl                      7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        Internationalisation module for PHP
+ii  php7.2-json                      7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        JSON module for PHP
+ii  php7.2-mbstring                  7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        MBSTRING module for PHP
+ii  php7.2-mysql                     7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        MySQL module for PHP
+ii  php7.2-opcache                   7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        Zend OpCache module for PHP
+ii  php7.2-pgsql                     7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        PostgreSQL module for PHP
+ii  php7.2-readline                  7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        readline module for PHP
+ii  php7.2-soap                      7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        SOAP module for PHP
+ii  php7.2-sqlite3                   7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        SQLite3 module for PHP
+ii  php7.2-xml                       7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        DOM, SimpleXML, WDDX, XML, and XSL module for PHP
+ii  php7.2-zip                       7.2.16-1+ubuntu18.04.1+deb.sury.org+1                    amd64        Zip module for PHP
+ii  php7.3-common                    7.3.3-1+ubuntu18.04.1+deb.sury.org+1                     amd64        documentation, examples and common module for PHP
+ii  php7.3-xmlrpc                    7.3.3-1+ubuntu18.04.1+deb.sury.org+1                     amd64        XMLRPC-EPI module for PHP
+ii  pkg-php-tools                    1.35ubuntu1                                              all          various packaging tools and scripts for PHP packages

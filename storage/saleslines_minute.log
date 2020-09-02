@@ -1,0 +1,4358 @@
+2020-07-17
+2020-07-17
+1595012492 = 2020-07-17 12:01:32
+2020-07-17
+2020-07-17
+1595016079 = 2020-07-17 13:01:19
+2020-07-17
+2020-07-17
+1595019689 = 2020-07-17 14:01:29
+2020-07-17
+2020-07-17
+1595023290 = 2020-07-17 15:01:30
+2020-07-17
+2020-07-17
+1595026894 = 2020-07-17 16:01:34
+2020-07-17
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-17
+2020-07-17
+1595034024 = 2020-07-17 18:00:24
+2020-07-17
+2020-07-17
+1595037690 = 2020-07-17 19:01:30
+2020-07-17
+2020-07-17
+1595041292 = 2020-07-17 20:01:32
+2020-07-17
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-17
+2020-07-17
+1595048490 = 2020-07-17 22:01:30
+2020-07-17
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-18
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-18
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-18
+2020-07-18
+1595062900 = 2020-07-18 02:01:40
+2020-07-18
+2020-07-18
+1595066489 = 2020-07-18 03:01:29
+2020-07-18
+2020-07-18
+1595070089 = 2020-07-18 04:01:29
+2020-07-18
+2020-07-18
+1595073698 = 2020-07-18 05:01:38
+2020-07-18
+2020-07-18
+1595077298 = 2020-07-18 06:01:38
+2020-07-18
+2020-07-18
+1595080891 = 2020-07-18 07:01:31
+2020-07-18
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-18
+2020-07-18
+1595088098 = 2020-07-18 09:01:38
+2020-07-18
+2020-07-18
+1595091688 = 2020-07-18 10:01:28
+2020-07-18
+2020-07-18
+1595095288 = 2020-07-18 11:01:28
+2020-07-18
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-18
+2020-07-18
+1595102501 = 2020-07-18 13:01:41
+2020-07-18
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-18
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-18
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-18
+2020-07-18
+1595116901 = 2020-07-18 17:01:41
+2020-07-18
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/object
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/object", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>execute_kw</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <int>2</int>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>sale.order.line</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>read</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data>
+     <value>
+      <array>
+       <data>
+        <value>
+         <int>76510</int>
+        </value>
+        <value>
+         <int>76511</int>
+        </value>
+        <value>
+         <int>76512</int>
+        </value>
+        <value>
+         <int>76513</int>
+        </value>
+        <value>
+         <int>76514</int>
+        </value>
+        <value>
+         <int>76515</int>
+        </value>
+        <value>
+         <int>76516</int>
+        </value>
+        <value>
+         <int>76517</int>
+        </value>
+        <value>
+         <int>76502</int>
+        </value>
+        <value>
+         <int>76503</int>
+        </value>
+        <value>
+         <int>76504</int>
+        </value>
+        <value>
+         <int>76505</int>
+        </value>
+        <value>
+         <int>76506</int>
+        </value>
+        <value>
+         <int>76507</int>
+        </value>
+        <value>
+         <int>76508</int>
+        </value>
+        <value>
+         <int>76509</int>
+        </value>
+        <value>
+         <int>76488</int>
+        </value>
+        <value>
+         <int>76489</int>
+        </value>
+        <value>
+         <int>76490</int>
+        </value>
+        <value>
+         <int>76491</int>
+        </value>
+        <value>
+         <int>76492</int>
+        </value>
+        <value>
+         <int>76493</int>
+        </value>
+        <value>
+         <int>76494</int>
+        </value>
+        <value>
+         <int>76495</int>
+        </value>
+        <value>
+         <int>76496</int>
+        </value>
+        <value>
+         <int>76497</int>
+        </value>
+        <value>
+         <int>76498</int>
+        </value>
+        <value>
+         <int>76499</int>
+        </value>
+        <value>
+         <int>76500</int>
+        </value>
+        <value>
+         <int>76501</int>
+        </value>
+        <value>
+         <int>76483</int>
+        </value>
+        <value>
+         <int>76484</int>
+        </value>
+        <value>
+         <int>76485</int>
+        </value>
+        <value>
+         <int>76486</int>
+        </value>
+        <value>
+         <int>76487</int>
+        </value>
+        <value>
+         <int>76471</int>
+        </value>
+        <value>
+         <int>76472</int>
+        </value>
+        <value>
+         <int>76473</int>
+        </value>
+        <value>
+         <int>76474</int>
+        </value>
+        <value>
+         <int>76475</int>
+        </value>
+        <value>
+         <int>76476</int>
+        </value>
+        <value>
+         <int>76477</int>
+        </value>
+        <value>
+         <int>76478</int>
+        </value>
+        <value>
+         <int>76479</int>
+        </value>
+        <value>
+         <int>76480</int>
+        </value>
+        <value>
+         <int>76481</int>
+        </value>
+        <value>
+         <int>76482</int>
+        </value>
+        <value>
+         <int>76332</int>
+        </value>
+        <value>
+         <int>76333</int>
+        </value>
+        <value>
+         <int>76334</int>
+        </value>
+        <value>
+         <int>76335</int>
+        </value>
+        <value>
+         <int>76336</int>
+        </value>
+        <value>
+         <int>76337</int>
+        </value>
+        <value>
+         <int>76338</int>
+        </value>
+        <value>
+         <int>76339</int>
+        </value>
+        <value>
+         <int>76340</int>
+        </value>
+        <value>
+         <int>76341</int>
+        </value>
+        <value>
+         <int>76342</int>
+        </value>
+        <value>
+         <int>76343</int>
+        </value>
+        <value>
+         <int>76344</int>
+        </value>
+        <value>
+         <int>76345</int>
+        </value>
+        <value>
+         <int>76346</int>
+        </value>
+        <value>
+         <int>76116</int>
+        </value>
+        <value>
+         <int>76117</int>
+        </value>
+        <value>
+         <int>75464</int>
+        </value>
+        <value>
+         <int>75465</int>
+        </value>
+        <value>
+         <int>75466</int>
+        </value>
+        <value>
+         <int>75449</int>
+        </value>
+        <value>
+         <int>75450</int>
+        </value>
+        <value>
+         <int>75451</int>
+        </value>
+        <value>
+         <int>75452</int>
+        </value>
+        <value>
+         <int>75453</int>
+        </value>
+        <value>
+         <int>75454</int>
+        </value>
+        <value>
+         <int>75455</int>
+        </value>
+        <value>
+         <int>75456</int>
+        </value>
+        <value>
+         <int>75441</int>
+        </value>
+        <value>
+         <int>75442</int>
+        </value>
+        <value>
+         <int>75443</int>
+        </value>
+        <value>
+         <int>75445</int>
+        </value>
+        <value>
+         <int>75446</int>
+        </value>
+        <value>
+         <int>75447</int>
+        </value>
+        <value>
+         <int>75448</int>
+        </value>
+        <value>
+         <int>75581</int>
+        </value>
+        <value>
+         <int>75435</int>
+        </value>
+        <value>
+         <int>75263</int>
+        </value>
+        <value>
+         <int>75264</int>
+        </value>
+        <value>
+         <int>75265</int>
+        </value>
+        <value>
+         <int>75266</int>
+        </value>
+        <value>
+         <int>75267</int>
+        </value>
+        <value>
+         <int>75268</int>
+        </value>
+        <value>
+         <int>75269</int>
+        </value>
+        <value>
+         <int>75270</int>
+        </value>
+        <value>
+         <int>75271</int>
+        </value>
+        <value>
+         <int>75272</int>
+        </value>
+        <value>
+         <int>75273</int>
+        </value>
+        <value>
+         <int>75274</int>
+        </value>
+        <value>
+         <int>75253</int>
+        </value>
+        <value>
+         <int>75254</int>
+        </value>
+        <value>
+         <int>75255</int>
+        </value>
+        <value>
+         <int>75256</int>
+        </value>
+        <value>
+         <int>75258</int>
+        </value>
+        <value>
+         <int>75259</int>
+        </value>
+        <value>
+         <int>75260</int>
+        </value>
+        <value>
+         <int>75261</int>
+        </value>
+        <value>
+         <int>75278</int>
+        </value>
+        <value>
+         <int>75279</int>
+        </value>
+        <value>
+         <int>75436</int>
+        </value>
+        <value>
+         <int>75243</int>
+        </value>
+        <value>
+         <int>75182</int>
+        </value>
+        <value>
+         <int>75183</int>
+        </value>
+        <value>
+         <int>75184</int>
+        </value>
+        <value>
+         <int>75185</int>
+        </value>
+        <value>
+         <int>75186</int>
+        </value>
+        <value>
+         <int>75187</int>
+        </value>
+        <value>
+         <int>75188</int>
+        </value>
+        <value>
+         <int>75189</int>
+        </value>
+        <value>
+         <int>75190</int>
+        </value>
+        <value>
+         <int>75191</int>
+        </value>
+        <value>
+         <int>75132</int>
+        </value>
+        <value>
+         <int>75133</int>
+        </value>
+        <value>
+         <int>75134</int>
+        </value>
+        <value>
+         <int>75040</int>
+        </value>
+        <value>
+         <int>75041</int>
+        </value>
+        <value>
+         <int>75042</int>
+        </value>
+        <value>
+         <int>75043</int>
+        </value>
+        <value>
+         <int>75044</int>
+        </value>
+        <value>
+         <int>75045</int>
+        </value>
+        <value>
+         <int>75046</int>
+        </value>
+        <value>
+         <int>75047</int>
+        </value>
+        <value>
+         <int>75048</int>
+        </value>
+        <value>
+         <int>75049</int>
+        </value>
+        <value>
+         <int>75050</int>
+        </value>
+        <value>
+         <int>75051</int>
+        </value>
+        <value>
+         <int>75052</int>
+        </value>
+        <value>
+         <int>75053</int>
+        </value>
+        <value>
+         <int>75054</int>
+        </value>
+        <value>
+         <int>75029</int>
+        </value>
+        <value>
+         <int>75030</int>
+        </value>
+        <value>
+         <int>74921</int>
+        </value>
+        <value>
+         <int>74922</int>
+        </value>
+        <value>
+         <int>74923</int>
+        </value>
+        <value>
+         <int>74924</int>
+        </value>
+        <value>
+         <int>74925</int>
+        </value>
+        <value>
+         <int>74907</int>
+        </value>
+        <value>
+         <int>74902</int>
+        </value>
+        <value>
+         <int>74899</int>
+        </value>
+        <value>
+         <int>74898</int>
+        </value>
+        <value>
+         <int>74876</int>
+        </value>
+        <value>
+         <int>74871</int>
+        </value>
+        <value>
+         <int>74770</int>
+        </value>
+        <value>
+         <int>74725</int>
+        </value>
+        <value>
+         <int>74726</int>
+        </value>
+        <value>
+         <int>74727</int>
+        </value>
+        <value>
+         <int>74755</int>
+        </value>
+        <value>
+         <int>74756</int>
+        </value>
+        <value>
+         <int>74757</int>
+        </value>
+        <value>
+         <int>74758</int>
+        </value>
+        <value>
+         <int>74759</int>
+        </value>
+        <value>
+         <int>74709</int>
+        </value>
+        <value>
+         <int>74710</int>
+        </value>
+        <value>
+         <int>74711</int>
+        </value>
+        <value>
+         <int>74712</int>
+        </value>
+        <value>
+         <int>74713</int>
+        </value>
+        <value>
+         <int>74646</int>
+        </value>
+        <value>
+         <int>74647</int>
+        </value>
+        <value>
+         <int>74648</int>
+        </value>
+        <value>
+         <int>74649</int>
+        </value>
+        <value>
+         <int>74634</int>
+        </value>
+        <value>
+         <int>74635</int>
+        </value>
+        <value>
+         <int>74636</int>
+        </value>
+        <value>
+         <int>74398</int>
+        </value>
+        <value>
+         <int>74399</int>
+        </value>
+        <value>
+         <int>74400</int>
+        </value>
+        <value>
+         <int>74401</int>
+        </value>
+        <value>
+         <int>74402</int>
+        </value>
+        <value>
+         <int>74403</int>
+        </value>
+        <value>
+         <int>74404</int>
+        </value>
+        <value>
+         <int>74405</int>
+        </value>
+        <value>
+         <int>74406</int>
+        </value>
+        <value>
+         <int>74407</int>
+        </value>
+        <value>
+         <int>74408</int>
+        </value>
+        <value>
+         <int>74409</int>
+        </value>
+        <value>
+         <int>74410</int>
+        </value>
+        <value>
+         <int>74411</int>
+        </value>
+        <value>
+         <int>74412</int>
+        </value>
+        <value>
+         <int>74413</int>
+        </value>
+        <value>
+         <int>71363</int>
+        </value>
+        <value>
+         <int>71364</int>
+        </value>
+        <value>
+         <int>71365</int>
+        </value>
+        <value>
+         <int>71366</int>
+        </value>
+        <value>
+         <int>71367</int>
+        </value>
+        <value>
+         <int>71368</int>
+        </value>
+        <value>
+         <int>71369</int>
+        </value>
+        <value>
+         <int>71370</int>
+        </value>
+        <value>
+         <int>70377</int>
+        </value>
+        <value>
+         <int>70378</int>
+        </value>
+        <value>
+         <int>70235</int>
+        </value>
+        <value>
+         <int>70236</int>
+        </value>
+        <value>
+         <int>69409</int>
+        </value>
+        <value>
+         <int>69410</int>
+        </value>
+        <value>
+         <int>69411</int>
+        </value>
+        <value>
+         <int>69412</int>
+        </value>
+        <value>
+         <int>69413</int>
+        </value>
+        <value>
+         <int>69414</int>
+        </value>
+        <value>
+         <int>69415</int>
+        </value>
+        <value>
+         <int>69416</int>
+        </value>
+        <value>
+         <int>69291</int>
+        </value>
+        <value>
+         <int>69292</int>
+        </value>
+        <value>
+         <int>69293</int>
+        </value>
+        <value>
+         <int>69294</int>
+        </value>
+        <value>
+         <int>69296</int>
+        </value>
+        <value>
+         <int>69297</int>
+        </value>
+        <value>
+         <int>69299</int>
+        </value>
+        <value>
+         <int>69300</int>
+        </value>
+        <value>
+         <int>69301</int>
+        </value>
+        <value>
+         <int>36684</int>
+        </value>
+        <value>
+         <int>36685</int>
+        </value>
+        <value>
+         <int>36686</int>
+        </value>
+        <value>
+         <int>36687</int>
+        </value>
+        <value>
+         <int>36690</int>
+        </value>
+        <value>
+         <int>36691</int>
+        </value>
+        <value>
+         <int>36692</int>
+        </value>
+        <value>
+         <int>36693</int>
+        </value>
+        <value>
+         <int>36694</int>
+        </value>
+        <value>
+         <int>36695</int>
+        </value>
+       </data>
+      </array>
+     </value>
+    </data>
+   </array>
+  </value>
+ </param>
+ <param>
+  <value>
+   <struct>
+    <member>
+     <name>fields</name>
+     <value>
+      <array>
+       <data>
+        <value>
+         <string>id</string>
+        </value>
+        <value>
+         <string>write_date</string>
+        </value>
+        <value>
+         <string>name</string>
+        </value>
+        <value>
+         <string>price_subtotal</string>
+        </value>
+        <value>
+         <string>move_ids</string>
+        </value>
+        <value>
+         <string>invoice_lines</string>
+        </value>
+        <value>
+         <string>untaxed_amount_to_invoice</string>
+        </value>
+        <value>
+         <string>untaxed_amount_invoiced</string>
+        </value>
+        <value>
+         <string>invoice_status</string>
+        </value>
+        <value>
+         <string>margin</string>
+        </value>
+        <value>
+         <string>qty_invoiced</string>
+        </value>
+        <value>
+         <string>qty_to_invoice</string>
+        </value>
+        <value>
+         <string>qty_delivered</string>
+        </value>
+        <value>
+         <string>product_uom_qty</string>
+        </value>
+        <value>
+         <string>price_unit</string>
+        </value>
+        <value>
+         <string>product_uom</string>
+        </value>
+        <value>
+         <string>create_date</string>
+        </value>
+        <value>
+         <string>order_partner_id</string>
+        </value>
+        <value>
+         <string>product_id</string>
+        </value>
+        <value>
+         <string>order_partner_id</string>
+        </value>
+        <value>
+         <string>list_price</string>
+        </value>
+        <value>
+         <string>order_id</string>
+        </value>
+        <value>
+         <string>purchase_price</string>
+        </value>
+        <value>
+         <string>salesman_id</string>
+        </value>
+       </data>
+      </array>
+     </value>
+    </member>
+   </struct>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("execute_kw")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:443
+
+  Please use the argument -v to see more details.
+2020-07-18
+2020-07-18
+1595124088 = 2020-07-18 19:01:28
+2020-07-18
+2020-07-18
+1595127690 = 2020-07-18 20:01:30
+2020-07-18
+2020-07-18
+1595131297 = 2020-07-18 21:01:37
+2020-07-18
+2020-07-18
+1595134887 = 2020-07-18 22:01:27
+2020-07-18
+2020-07-18
+1595138487 = 2020-07-18 23:01:27
+2020-07-19
+2020-07-19
+1595142093 = 2020-07-19 00:01:33
+2020-07-19
+2020-07-19
+1595145615 = 2020-07-19 01:00:15
+2020-07-19
+2020-07-19
+1595149299 = 2020-07-19 02:01:39
+2020-07-19
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-19
+2020-07-19
+1595156489 = 2020-07-19 04:01:29
+2020-07-19
+2020-07-19
+1595160090 = 2020-07-19 05:01:30
+2020-07-19
+2020-07-19
+1595163697 = 2020-07-19 06:01:37
+2020-07-19
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-19
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/object
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/object", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>execute_kw</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <int>2</int>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>sale.order.line</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>read</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data>
+     <value>
+      <array>
+       <data/>
+      </array>
+     </value>
+    </data>
+   </array>
+  </value>
+ </param>
+ <param>
+  <value>
+   <struct>
+    <member>
+     <name>fields</name>
+     <value>
+      <array>
+       <data>
+        <value>
+         <string>id</string>
+        </value>
+        <value>
+         <string>write_date</string>
+        </value>
+        <value>
+         <string>name</string>
+        </value>
+        <value>
+         <string>price_subtotal</string>
+        </value>
+        <value>
+         <string>move_ids</string>
+        </value>
+        <value>
+         <string>invoice_lines</string>
+        </value>
+        <value>
+         <string>untaxed_amount_to_invoice</string>
+        </value>
+        <value>
+         <string>untaxed_amount_invoiced</string>
+        </value>
+        <value>
+         <string>invoice_status</string>
+        </value>
+        <value>
+         <string>margin</string>
+        </value>
+        <value>
+         <string>qty_invoiced</string>
+        </value>
+        <value>
+         <string>qty_to_invoice</string>
+        </value>
+        <value>
+         <string>qty_delivered</string>
+        </value>
+        <value>
+         <string>product_uom_qty</string>
+        </value>
+        <value>
+         <string>price_unit</string>
+        </value>
+        <value>
+         <string>product_uom</string>
+        </value>
+        <value>
+         <string>create_date</string>
+        </value>
+        <value>
+         <string>order_partner_id</string>
+        </value>
+        <value>
+         <string>product_id</string>
+        </value>
+        <value>
+         <string>order_partner_id</string>
+        </value>
+        <value>
+         <string>list_price</string>
+        </value>
+        <value>
+         <string>order_id</string>
+        </value>
+        <value>
+         <string>purchase_price</string>
+        </value>
+        <value>
+         <string>salesman_id</string>
+        </value>
+       </data>
+      </array>
+     </value>
+    </member>
+   </struct>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("execute_kw")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:443
+
+  Please use the argument -v to see more details.
+2020-07-19
+2020-07-19
+1595174509 = 2020-07-19 09:01:49
+2020-07-19
+2020-07-19
+1595178100 = 2020-07-19 10:01:40
+2020-07-19
+2020-07-19
+1595181692 = 2020-07-19 11:01:32
+2020-07-19
+2020-07-19
+1595185230 = 2020-07-19 12:00:30
+2020-07-19
+2020-07-19
+1595188919 = 2020-07-19 13:01:59
+2020-07-19
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-19
+2020-07-19
+1595196102 = 2020-07-19 15:01:42
+2020-07-19
+2020-07-19
+1595199700 = 2020-07-19 16:01:40
+2020-07-19
+2020-07-19
+1595203304 = 2020-07-19 17:01:44
+2020-07-19
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-19
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-19
+2020-07-19
+1595214095 = 2020-07-19 20:01:35
+2020-07-19
+2020-07-19
+1595217674 = 2020-07-19 21:01:14
+2020-07-19
+2020-07-19
+1595221299 = 2020-07-19 22:01:39
+2020-07-19
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-20
+2020-07-20
+1595228491 = 2020-07-20 00:01:31
+2020-07-20
+2020-07-20
+1595232099 = 2020-07-20 01:01:39
+2020-07-20
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-20
+2020-07-20
+1595239285 = 2020-07-20 03:01:25
+2020-07-20
+2020-07-20
+1595242859 = 2020-07-20 04:00:59
+2020-07-20
+2020-07-20
+1595246491 = 2020-07-20 05:01:31
+2020-07-20
+2020-07-20
+1595250096 = 2020-07-20 06:01:36
+2020-07-20
+2020-07-20
+1595253685 = 2020-07-20 07:01:25
+2020-07-20
+2020-07-20
+1595257290 = 2020-07-20 08:01:30
+2020-07-20
+2020-07-20
+1595260901 = 2020-07-20 09:01:41
+2020-07-20
+2020-07-20
+1595264491 = 2020-07-20 10:01:31
+2020-07-20
+2020-07-20
+1595268088 = 2020-07-20 11:01:28
+2020-07-20
+2020-07-20
+1595271697 = 2020-07-20 12:01:37
+2020-07-20
+2020-07-20
+1595275312 = 2020-07-20 13:01:52
+2020-07-20
+2020-07-20
+1595278895 = 2020-07-20 14:01:35
+2020-07-20
+2020-07-20
+1595282498 = 2020-07-20 15:01:38
+2020-07-20
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-20
+2020-07-20
+1595289710 = 2020-07-20 17:01:50
+2020-07-20
+2020-07-20
+1595293316 = 2020-07-20 18:01:56
+2020-07-20
+2020-07-20
+1595296865 = 2020-07-20 19:01:05
+2020-07-20
+2020-07-20
+1595300500 = 2020-07-20 20:01:40
+2020-07-20
+2020-07-20
+1595304104 = 2020-07-20 21:01:44
+2020-07-20
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-20
+2020-07-20
+1595311304 = 2020-07-20 23:01:44
+2020-07-21
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-21
+2020-07-21
+1595318497 = 2020-07-21 01:01:37
+2020-07-21
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-21
+2020-07-21
+1595325686 = 2020-07-21 03:01:26
+2020-07-21
+2020-07-21
+1595329218 = 2020-07-21 04:00:18
+2020-07-21
+2020-07-21
+1595332893 = 2020-07-21 05:01:33
+2020-07-21
+2020-07-21
+1595336494 = 2020-07-21 06:01:34
+2020-07-21
+2020-07-21
+1595340089 = 2020-07-21 07:01:29
+2020-07-21
+2020-07-21
+1595343690 = 2020-07-21 08:01:30
+2020-07-21
+2020-07-21
+1595347304 = 2020-07-21 09:01:44
+2020-07-21
+2020-07-21
+1595350888 = 2020-07-21 10:01:28
+2020-07-21
+2020-07-21
+1595354490 = 2020-07-21 11:01:30
+2020-07-21
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-21
+2020-07-21
+1595361706 = 2020-07-21 13:01:46
+2020-07-21
+2020-07-21
+1595365290 = 2020-07-21 14:01:30
+2020-07-21
+2020-07-21
+1595368889 = 2020-07-21 15:01:29
+2020-07-21
+2020-07-21
+1595376101 = 2020-07-21 17:01:41
+2020-07-21
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-21
+2020-07-21
+1595383292 = 2020-07-21 19:01:32
+2020-07-21
+2020-07-21
+1595386890 = 2020-07-21 20:01:30
+2020-07-21
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-21
+2020-07-21
+1595394091 = 2020-07-21 22:01:31
+2020-07-21
+2020-07-21
+1595397694 = 2020-07-21 23:01:34
+2020-07-22
+2020-07-22
+1595401290 = 2020-07-22 00:01:30
+2020-07-22
+2020-07-22
+1595404900 = 2020-07-22 01:01:40
+2020-07-22
+2020-07-22
+1595408412 = 2020-07-22 02:00:12
+2020-07-22
+2020-07-22
+1595412086 = 2020-07-22 03:01:26
+2020-07-22
+2020-07-22
+1595415687 = 2020-07-22 04:01:27
+2020-07-22
+2020-07-22
+1595419292 = 2020-07-22 05:01:32
+2020-07-22
+2020-07-22
+1595422891 = 2020-07-22 06:01:31
+2020-07-22
+2020-07-22
+1595426489 = 2020-07-22 07:01:29
+2020-07-22
+2020-07-22
+1595430087 = 2020-07-22 08:01:27
+2020-07-22
+2020-07-22
+1595433702 = 2020-07-22 09:01:42
+2020-07-22
+2020-07-22
+1595437291 = 2020-07-22 10:01:31
+2020-07-22
+2020-07-22
+1595440889 = 2020-07-22 11:01:29
+2020-07-22
+2020-07-22
+1595444493 = 2020-07-22 12:01:33
+2020-07-22
+2020-07-22
+1595448105 = 2020-07-22 13:01:45
+2020-07-22
+2020-07-22
+1595451693 = 2020-07-22 14:01:33
+2020-07-22
+2020-07-22
+1595455294 = 2020-07-22 15:01:34
+2020-07-22
+2020-07-22
+1595458893 = 2020-07-22 16:01:33
+2020-07-22
+2020-07-22
+1595462505 = 2020-07-22 17:01:45
+2020-07-22
+2020-07-22
+1595466127 = 2020-07-22 18:02:07
+2020-07-22
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-22
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-22
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/object
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/object", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>execute_kw</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <int>2</int>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>sale.order.line</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>search</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data>
+     <value>
+      <array>
+       <data>
+        <value>
+         <array>
+          <data>
+           <value>
+            <string>write_date</string>
+           </value>
+           <value>
+            <string>&#62;=</string>
+           </value>
+           <value>
+            <string>2020-07-22</string>
+           </value>
+          </data>
+         </array>
+        </value>
+       </data>
+      </array>
+     </value>
+    </data>
+   </array>
+  </value>
+ </param>
+ <param>
+  <value>
+   <struct>
+    <member>
+     <name>limit</name>
+     <value>
+      <string/>
+     </value>
+    </member>
+    <member>
+     <name>offset</name>
+     <value>
+      <string/>
+     </value>
+    </member>
+   </struct>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("execute_kw")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:443
+
+  Please use the argument -v to see more details.
+2020-07-22
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-22
+2020-07-22
+1595484099 = 2020-07-22 23:01:39
+2020-07-23
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-23
+2020-07-23
+1595491301 = 2020-07-23 01:01:41
+2020-07-23
+2020-07-23
+1595494904 = 2020-07-23 02:01:44
+2020-07-23
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-23
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-23
+2020-07-23
+1595505691 = 2020-07-23 05:01:31
+2020-07-23
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-23
+2020-07-23
+1595512892 = 2020-07-23 07:01:32
+2020-07-23
+2020-07-23
+1595516838 = 2020-07-23 08:07:18
+2020-07-23
+2020-07-23
+1595520108 = 2020-07-23 09:01:48
+2020-07-23
+2020-07-23
+1595527293 = 2020-07-23 11:01:33
+2020-07-23
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-23
+2020-07-23
+1595534505 = 2020-07-23 13:01:45
+2020-07-23
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-23
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-23
+2020-07-23
+1595545289 = 2020-07-23 16:01:29
+2020-07-23
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-23
+2020-07-23
+1595552515 = 2020-07-23 18:01:55
+2020-07-23
+2020-07-23
+1595556091 = 2020-07-23 19:01:31
+2020-07-23
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-23
+2020-07-23
+1595563300 = 2020-07-23 21:01:40
+2020-07-23
+2020-07-23
+1595566892 = 2020-07-23 22:01:32
+2020-07-23
+2020-07-23
+1595570493 = 2020-07-23 23:01:33
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+2020-07-24
+1595577698 = 2020-07-24 01:01:38
+2020-07-24
+2020-07-24
+1595581303 = 2020-07-24 02:01:43
+2020-07-24
+2020-07-24
+1595584888 = 2020-07-24 03:01:28
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+2020-07-24
+1595592093 = 2020-07-24 05:01:33
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+2020-07-24
+1595606506 = 2020-07-24 09:01:46
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+2020-07-24
+1595613614 = 2020-07-24 11:00:14
+2020-07-24
+2020-07-24
+1595617290 = 2020-07-24 12:01:30
+2020-07-24
+2020-07-24
+1595620906 = 2020-07-24 13:01:46
+2020-07-24
+2020-07-24
+1595624491 = 2020-07-24 14:01:31
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+2020-07-24
+1595635299 = 2020-07-24 17:01:39
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+2020-07-24
+1595642496 = 2020-07-24 19:01:36
+2020-07-24
+2020-07-24
+1595646092 = 2020-07-24 20:01:32
+2020-07-24
+2020-07-24
+1595649697 = 2020-07-24 21:01:37
+2020-07-24
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-24
+2020-07-24
+1595656896 = 2020-07-24 23:01:36
+2020-07-25
+2020-07-25
+1595660492 = 2020-07-25 00:01:32
+2020-07-25
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-25
+2020-07-25
+1595667733 = 2020-07-25 02:02:13
+2020-07-25
+2020-07-25
+1595671285 = 2020-07-25 03:01:25
+2020-07-25
+2020-07-25
+1595674893 = 2020-07-25 04:01:33
+2020-07-25
+2020-07-25
+1595678496 = 2020-07-25 05:01:36
+2020-07-25
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-25
+2020-07-25
+1595685683 = 2020-07-25 07:01:23
+2020-07-25
+2020-07-25
+1595689289 = 2020-07-25 08:01:29
+2020-07-25
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-25
+2020-07-25
+1595696491 = 2020-07-25 10:01:31
+2020-07-25
+2020-07-25
+1595700088 = 2020-07-25 11:01:28
+2020-07-25
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-25
+2020-07-25
+1595707278 = 2020-07-25 13:01:18
+2020-07-25
+2020-07-25
+1595710884 = 2020-07-25 14:01:24
+2020-07-25
+2020-07-25
+1595714487 = 2020-07-25 15:01:27
+2020-07-25
+2020-07-25
+1595718085 = 2020-07-25 16:01:25
+2020-07-25
+2020-07-25
+1595721697 = 2020-07-25 17:01:37
+2020-07-25
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-25
+2020-07-25
+1595728889 = 2020-07-25 19:01:29
+2020-07-25
+2020-07-25
+1595732488 = 2020-07-25 20:01:28
+2020-07-25
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-25
+2020-07-25
+1595739687 = 2020-07-25 22:01:27
+2020-07-25
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-26
+2020-07-26
+1595746815 = 2020-07-26 00:00:15
+2020-07-26
+2020-07-26
+1595750415 = 2020-07-26 01:00:15
+2020-07-26
+2020-07-26
+1595754101 = 2020-07-26 02:01:41
+2020-07-26
+2020-07-26
+1595757689 = 2020-07-26 03:01:29
+2020-07-26
+2020-07-26
+1595761290 = 2020-07-26 04:01:30
+2020-07-26
+2020-07-26
+1595764894 = 2020-07-26 05:01:34
+2020-07-26
+2020-07-26
+1595768503 = 2020-07-26 06:01:43
+2020-07-26
+
+   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 		$this->responseHeaders = $http_response_header;
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 		return $result;
+    492| 	}
+
+  Exception trace:
+
+  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
+<methodCall>
+<methodName>authenticate</methodName>
+<params>
+ <param>
+  <value>
+   <string>ozdistribution-odooshv11-production-70102</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>alfred.laggner@gmail.com</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <string>jahai999</string>
+  </value>
+ </param>
+ <param>
+  <value>
+   <array>
+    <data/>
+   </array>
+  </value>
+ </param>
+</params>
+</methodCall>
+")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
+
+  2   Ripcord_Client::__call("authenticate")
+      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
+
+  Please use the argument -v to see more details.
+2020-07-26
+2020-07-26
+1595775653 = 2020-07-26 08:00:53

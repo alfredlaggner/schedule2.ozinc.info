@@ -63,29 +63,29 @@ class calcLastSku extends Command
 
         for ($i = 0; $i < count($categories); $i++) {
             $counter = 0;
-            $this->info("$i = " . $i);
-            $this->info("code = " . $categories[$i] );
+/*            $this->info("$i = " . $i);
+            $this->info("code = " . $categories[$i] );*/
 
             $last_sku = DB::table('products')
                 ->orderby('code', 'desc')
                 ->where('category', '=', $categories[$i])
                 ->where('code', '!=', '0')
                 ->first();
-                 $this->info("code = " . $last_sku->code );
-                $this->info("category = " . $last_sku->category );
+//                 $this->info("code = " . $last_sku->code );
+//                $this->info("category = " . $last_sku->category );
 //dd($last_sku);
             $no_skus = DB::table('products')->orderby('code', 'desc')
                 ->where('category', '=', $categories[$i])
                 ->where('code', '=', '0')
                 ->get();
 
-            $this->info("count = " . $categories[$i] . " " . $no_skus->count());
+//            $this->info("count = " . $categories[$i] . " " . $no_skus->count());
             if ($no_skus->count() > 0) {
                 $counter = intval(substr($last_sku->code, 2)) + 1;
                 if ($counter == 0) {
                     $counter = 1;
                 }
-                $this->info("counter= " . $counter);
+//                $this->info("counter= " . $counter);
 
                 foreach ($no_skus as $no_sku) {
                     //      $this->info($no_sku->ext_id);

@@ -55,6 +55,7 @@ class Kernel extends ConsoleKernel
         'App\Console\Commands\employee_bonus',
         'App\Console\Commands\put_all_companies',
         'App\Console\Commands\check_logs',
+        'App\Console\Commands\ResetOdooCommissions',
     ];
 
 	protected function scheduleTimezone()

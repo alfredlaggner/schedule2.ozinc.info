@@ -1,223 +1,78 @@
 -6 months
+-6 months
+1599117227 = 2020-09-03 07:13:47
+-6 months
 
-   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+   Ripcord_TransportException 
 
-  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+  Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
     484| 		$result  = @file_get_contents( $url, false, $context );
-    485| 		$this->responseHeaders = $http_response_header;
+    485| 
     486| 		if ( !$result )
     487| 		{
   > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
     489| 				ripcord::cannotAccessURL );
     490| 		}
-    491| 		return $result;
-    492| 	}
+    491| 
+    492| 		$this->responseHeaders = $http_response_header;
 
-  Exception trace:
+      [2m+3 vendor frames [22m
+  4   app/Console/Commands/getSalesLines.php:61
+      Edujugon\Laradoo\Odoo::connect()
 
-  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
-<methodCall>
-<methodName>authenticate</methodName>
-<params>
- <param>
-  <value>
-   <string>ozdistribution-odooshv11-production-70102</string>
-  </value>
- </param>
- <param>
-  <value>
-   <string>alfred.laggner@gmail.com</string>
-  </value>
- </param>
- <param>
-  <value>
-   <string>jahai999</string>
-  </value>
- </param>
- <param>
-  <value>
-   <array>
-    <data/>
-   </array>
-  </value>
- </param>
-</params>
-</methodCall>
-")
-      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
-
-  2   Ripcord_Client::__call("authenticate")
-      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
-
-  Please use the argument -v to see more details.
--6 months
--6 months
-1595142573 = 2020-07-19 00:09:33
--6 months
--6 months
-1595228957 = 2020-07-20 00:09:17
+      [2m+14 vendor frames [22m
+  19  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 -6 months
 
-   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+   Ripcord_TransportException 
 
-  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+  Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
     484| 		$result  = @file_get_contents( $url, false, $context );
-    485| 		$this->responseHeaders = $http_response_header;
+    485| 
     486| 		if ( !$result )
     487| 		{
   > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
     489| 				ripcord::cannotAccessURL );
     490| 		}
-    491| 		return $result;
-    492| 	}
+    491| 
+    492| 		$this->responseHeaders = $http_response_header;
 
-  Exception trace:
+      [2m+3 vendor frames [22m
+  4   app/Console/Commands/getSalesLines.php:61
+      Edujugon\Laradoo\Odoo::connect()
 
-  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
-<methodCall>
-<methodName>authenticate</methodName>
-<params>
- <param>
-  <value>
-   <string>ozdistribution-odooshv11-production-70102</string>
-  </value>
- </param>
- <param>
-  <value>
-   <string>alfred.laggner@gmail.com</string>
-  </value>
- </param>
- <param>
-  <value>
-   <string>jahai999</string>
-  </value>
- </param>
- <param>
-  <value>
-   <array>
-    <data/>
-   </array>
-  </value>
- </param>
-</params>
-</methodCall>
-")
-      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
-
-  2   Ripcord_Client::__call("authenticate")
-      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
-
-  Please use the argument -v to see more details.
--6 months
--6 months
-1595401781 = 2020-07-22 00:09:41
+      [2m+14 vendor frames [22m
+  19  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 -6 months
 
-   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+   Ripcord_TransportException 
 
-  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+  Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
     484| 		$result  = @file_get_contents( $url, false, $context );
-    485| 		$this->responseHeaders = $http_response_header;
+    485| 
     486| 		if ( !$result )
     487| 		{
   > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
     489| 				ripcord::cannotAccessURL );
     490| 		}
-    491| 		return $result;
-    492| 	}
+    491| 
+    492| 		$this->responseHeaders = $http_response_header;
 
-  Exception trace:
+      [2m+3 vendor frames [22m
+  4   app/Console/Commands/getSalesLines.php:61
+      Edujugon\Laradoo\Odoo::connect()
 
-  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
-<methodCall>
-<methodName>authenticate</methodName>
-<params>
- <param>
-  <value>
-   <string>ozdistribution-odooshv11-production-70102</string>
-  </value>
- </param>
- <param>
-  <value>
-   <string>alfred.laggner@gmail.com</string>
-  </value>
- </param>
- <param>
-  <value>
-   <string>jahai999</string>
-  </value>
- </param>
- <param>
-  <value>
-   <array>
-    <data/>
-   </array>
-  </value>
- </param>
-</params>
-</methodCall>
-")
-      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
-
-  2   Ripcord_Client::__call("authenticate")
-      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
-
-  Please use the argument -v to see more details.
--6 months
-
-   Ripcord_TransportException  : Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
-
-  at /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
-    484| 		$result  = @file_get_contents( $url, false, $context );
-    485| 		$this->responseHeaders = $http_response_header;
-    486| 		if ( !$result )
-    487| 		{
-  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
-    489| 				ripcord::cannotAccessURL );
-    490| 		}
-    491| 		return $result;
-    492| 	}
-
-  Exception trace:
-
-  1   Ripcord_Transport_Stream::post("https://ozinc-production.odoo.com/xmlrpc/2/common", "<?xml version="1.0" encoding="utf-8"?>
-<methodCall>
-<methodName>authenticate</methodName>
-<params>
- <param>
-  <value>
-   <string>ozdistribution-odooshv11-production-70102</string>
-  </value>
- </param>
- <param>
-  <value>
-   <string>alfred.laggner@gmail.com</string>
-  </value>
- </param>
- <param>
-  <value>
-   <string>jahai999</string>
-  </value>
- </param>
- <param>
-  <value>
-   <array>
-    <data/>
-   </array>
-  </value>
- </param>
-</params>
-</methodCall>
-")
-      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:228
-
-  2   Ripcord_Client::__call("authenticate")
-      /home/forge/schedule.ozinc.info/vendor/edujugon/laradoo/src/Odoo.php:629
-
-  Please use the argument -v to see more details.
+      [2m+14 vendor frames [22m
+  19  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 -6 months
 -6 months
-1595660979 = 2020-07-25 00:09:39
--6 months
--6 months
-1595747296 = 2020-07-26 00:08:16
+1599462824 = 2020-09-07 07:13:44

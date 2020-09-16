@@ -42,3 +42,7 @@ Route::get('/invoicelines', 'TestSaleInvoiceController@invoicelines')->name('inv
 
 Route::get('/test', 'OdooController@getBrands')->name('test');
 Route::get('span', 'TimespanController@so_time_span')->name('span');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

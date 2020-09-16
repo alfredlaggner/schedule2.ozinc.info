@@ -1,9 +1,27 @@
-2020-07-18 00:01:06
-2020-07-19 00:02:04
-2020-07-20 00:01:50
-2020-07-21 00:00:38
-2020-07-22 00:01:57
-2020-07-23 00:00:40
-2020-07-24 00:00:50
-2020-07-25 00:02:31
-2020-07-26 00:00:40
+2020-09-03 07:01:43
+2020-09-04 07:01:45
+
+   Ripcord_TransportException 
+
+  Could not access https://ozinc-production.odoo.com/xmlrpc/2/common
+
+  at vendor/edujugon/laradoo/src/ripcord/ripcord_client.php:488
+    484| 		$result  = @file_get_contents( $url, false, $context );
+    485| 
+    486| 		if ( !$result )
+    487| 		{
+  > 488| 			throw new Ripcord_TransportException( 'Could not access ' . $url, 
+    489| 				ripcord::cannotAccessURL );
+    490| 		}
+    491| 
+    492| 		$this->responseHeaders = $http_response_header;
+
+      [2m+3 vendor frames [22m
+  4   app/Console/Commands/getCostomers.php:43
+      Edujugon\Laradoo\Odoo::connect()
+
+      [2m+14 vendor frames [22m
+  19  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+2020-09-06 07:00:39
+2020-09-07 07:01:36

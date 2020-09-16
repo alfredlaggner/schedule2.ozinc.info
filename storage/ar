@@ -1,1 +1,36 @@
-202030
+202037PHP Fatal error:  Trait 'Laravel\Scout\Searchable' not found in /home/forge/schedule2.ozinc.info/app/AgedReceivablesTotal.php on line 59
+
+   Symfony\Component\ErrorHandler\Error\FatalError 
+
+  Trait 'Laravel\Scout\Searchable' not found
+
+  at app/AgedReceivablesTotal.php:59
+    55|  * @mixin \Eloquent
+    56|  */
+    57| class AgedReceivablesTotal extends Model
+    58| {
+  > 59|     use Searchable;
+    60|     public function toSearchableArray()
+    61|     {
+    62|         $array = $this->toArray();
+    63|
+
+
+   Whoops\Exception\ErrorException 
+
+  Trait 'Laravel\Scout\Searchable' not found
+
+  at app/AgedReceivablesTotal.php:59
+    55|  * @mixin \Eloquent
+    56|  */
+    57| class AgedReceivablesTotal extends Model
+    58| {
+  > 59|     use Searchable;
+    60|     public function toSearchableArray()
+    61|     {
+    62|         $array = $this->toArray();
+    63|
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Whoops\Run::handleShutdown()

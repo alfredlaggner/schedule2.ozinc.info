@@ -176,6 +176,8 @@ class getPayments extends Command
                         $this->info($q->payments_amount);*/
         }
 
+        Payment::where('invoice_state','open')->delete();
+
         $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
 
     }

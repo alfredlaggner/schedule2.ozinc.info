@@ -56,9 +56,9 @@ class getPayments extends Command
         $odoo = $odoo->connect();
         $payments = $odoo
             ->where('payment_date', '>=', $start)
+            ->where('state', '=', 'posted')
             ->where('partner_type', '=', 'customer')
             ->where('has_invoices', '=', true)
-            ->where('state', '=', 'posted')
             //  ->where('id', '=', 9350)
             ->fields(
                 'id',
@@ -119,6 +119,7 @@ class getPayments extends Command
 
             }
         }
+        Payment::where('has_invoices', '=', false)->delete();
 
         Payment::leftJoin('invoices', 'invoices.ext_id', '=', 'payments.invoice_id')
             ->update([
@@ -176,7 +177,7 @@ class getPayments extends Command
                         $this->info($q->payments_amount);*/
         }
 
-        Payment::where('invoice_state','open')->delete();
+        Payment::where('invoice_state', 'open')->delete();
 
         $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
 

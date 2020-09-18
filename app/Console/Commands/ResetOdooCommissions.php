@@ -48,16 +48,16 @@ class ResetOdooCommissions extends Command
         $this->info($sales_person_id);
         $this->info($success);
 
-        $results = $odoo
-            ->where( 'user_id', '=',  38)
+/*        $results = $odoo
+            ->where( 'user_id', (int)$sales_person_id)
             ->where( 'x_studio_commission', '=',  0)
             ->fields(
                 'user_id',
                 'x_studio_commission',
-                'x_studio_commission_percent',
+                'x_studio_commission_percent'
             )
-            ->get('account.invoice');
+            ->get('account.invoice');*/
 
-dd($results);
+//dd($results);
     }
 }

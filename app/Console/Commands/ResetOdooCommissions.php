@@ -43,8 +43,11 @@ class ResetOdooCommissions extends Command
         $odoo->connect();
 
         $sales_person_id = $this->argument('sales_person_id');
-        $success = $odoo->where('user_id',(int)$sales_person_id)
-            ->update('account.invoice', ['x_studio_commission' => 0.00, 'x_studio_commission_percent' => 0.00]);
+   //     $success = $odoo->where('user_id', (int)$sales_person_id)
+        $success = $odoo->where('id','>=',1)->update('account.invoice', [
+            'x_studio_commission' => 0.00,
+            'x_studio_commission_percent' => 0.00,
+            'x_studio_commission_paid' => '01-01-2000']);
         $this->info($sales_person_id);
         $this->info($success);
 

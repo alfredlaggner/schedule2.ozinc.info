@@ -163,9 +163,10 @@ class getPayments extends Command
             'payments.amount as payments_amount',
             'payments.payment_date as payments_payment_date',
             'payments.invoice_id as payments_invoice_id')
-            ->leftJoin('payments', 'payments.invoice_id', '=', 'invoices.ext_id')
+            ->join('payments', 'payments.invoice_id', '=', 'invoices.ext_id')
             ->where('invoices.invoice_date', '>=', '2020-01-01')
-            ->get();
+                     ->orderBy('payments_payment_date','desc')
+   ->get();
 
         foreach ($query as $q) {
 //$this->info($q->invoice_date);

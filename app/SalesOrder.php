@@ -62,7 +62,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class SalesOrder extends Model
 {
-    use Searchable;
+   // use Searchable;
 
     protected $table = 'salesorders';
 	protected $fillable = ['ext_id','state','activity_state','sales_order','confirmation_date','invoice_status','sales_order_id','create_date','order_date','write_date','amount_untaxed','amount_total','amount_tax','deliver_date','salesperson_id','customer_id'];

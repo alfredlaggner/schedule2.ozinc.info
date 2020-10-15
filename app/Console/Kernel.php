@@ -69,6 +69,7 @@ class Kernel extends ConsoleKernel
      * @param Schedule $schedule
      * @return void
      */
+
     protected function schedule(Schedule $schedule)
     {
 		date_default_timezone_set('America/Los_Angeles');

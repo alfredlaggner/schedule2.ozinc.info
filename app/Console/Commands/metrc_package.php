@@ -120,8 +120,11 @@ class metrc_package extends Command
                         'lab_testing' => $packages[$i]->InitialLabTestingState,
                         'date' => $packages[$i]->PackagedDate,
                     ]);
+
+                $user = Package::where('quantity','<=', 0);
+                $user->delete();
             }
-            $this->update_odoo();
+          //  $this->update_odoo();
             $this->mark_used_tags();
             sleep(4);
         }

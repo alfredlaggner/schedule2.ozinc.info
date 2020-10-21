@@ -22,6 +22,7 @@ class Invoice extends Model
         'amount_untaxed',
         'amount_tax',
         'amount_total',
+        'amount_due',
         'amount_untaxed_signed',
         'order_date',
         'customer_id',

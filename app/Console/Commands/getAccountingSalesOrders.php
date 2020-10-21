@@ -55,6 +55,7 @@ class getAccountingSalesOrders extends Command
                 'display_name',
                 'amount_untaxed',
                 'amount_untaxed_signed',
+                'residual',
                 'date',
                 'create_date',
                 'date_invoice',

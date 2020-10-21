@@ -45,6 +45,7 @@ class getPayments extends Command
      */
     public function handle()
     {
+
         $start = new Carbon(now());
         $start = substr($start->firstOfMonth(), 0, 10);
 
@@ -59,7 +60,7 @@ class getPayments extends Command
             ->where('state', '=', 'posted')
             ->where('partner_type', '=', 'customer')
             ->where('has_invoices', '=', true)
-            //  ->where('id', '=', 9350)
+          //    ->where('id', '=', 10155)
             ->fields(
                 'id',
                 'name',
@@ -79,7 +80,7 @@ class getPayments extends Command
                             'x_studio_field_vOTbZ'*/
             )
             ->get('account.payment');
-        //        dd($payments);
+      //         dd($payments);
         for ($i = 0; $i < count($payments); $i++) {
 
             $invoices = $payments[$i]['invoice_ids'];
@@ -88,7 +89,7 @@ class getPayments extends Command
 
             for ($z = 0; $z < $invoice_count; $z++) {
                 $invoice_id = $invoices[$z];
-                $this->info($invoice_id);
+          //      $this->info($invoice_id);
 
 
                 Payment:: updateOrCreate(
@@ -131,6 +132,7 @@ class getPayments extends Command
                 'payments.amount' => DB::raw('invoices.amount_untaxed'),
                 'payments.tax' => DB::raw('invoices.amount_tax'),
                 'payments.invoice_state' => DB::raw('invoices.state'),
+                'payments.amount_due' => DB::raw('invoices.residual'),
             ]);
 
 
@@ -139,22 +141,21 @@ class getPayments extends Command
             ->where('payment_date', '>=', $start)
             ->get();
         foreach ($payments as $payment) {
-            if ($payment->payment_difference === 0.00) {
+/*            if ($payment->payment_difference === 0.00) {
                 $amount_due = 0;
             } else {
                 $amount_due = $payment->amount_taxed + $payment->payment_difference;
-            }
+            }*/
 
             $commission = $payment->commission;
-            if ($amount_due > 1.00) {
+/*            if ($amount_due > 1.00) {
                 //    dd($amount_due);
                 $commission = 0.00;
-            }
+            }*/
             Payment::where('id', $payment->id)->update([
                 'year_invoiced' => Carbon::createFromFormat('Y-m-d', $payment->invoice_date)->year,
                 'month_invoiced' => Carbon::createFromFormat('Y-m-d', $payment->invoice_date)->month,
                 'commission' => $commission,
-                'amount_due' => $amount_due
             ]);
         }
 

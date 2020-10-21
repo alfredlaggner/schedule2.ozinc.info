@@ -53,16 +53,16 @@ class metrc_items extends Command
         $license = 'C11-0000224-LIC';
         $new_package = '1A4060300003C35000019794';
 
-/*        $response = $client->request('GET', '/items/v1/active?licenseNumber=' . $license, $headers);
+        $response = $client->request('GET', '/items/v1/active?licenseNumber=' . $license, $headers);
         $items = json_decode($response->getBody()->getContents());
         //    dd(($items));
-*/
-
-        $response = $client->request('GET', '/unitsofmeasure/v1/active?licenseNumber=' . $license, $headers);
-        $items = json_decode($response->getBody()->getContents());
 
 
-            dd(($items));
+/*        $response = $client->request('GET', '/unitsofmeasure/v1/active?licenseNumber=' . $license, $headers);
+        $items = json_decode($response->getBody()->getContents());*/
+
+
+         //   dd(($items));
 
 
         for ($i = 0; $i < count($items); $i++) {

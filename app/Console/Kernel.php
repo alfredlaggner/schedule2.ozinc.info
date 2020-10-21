@@ -112,6 +112,7 @@ class Kernel extends ConsoleKernel
 		$schedule->command('calc:ar_to_collect')->weeklyOn(1, '6:00')->appendOutputTo(storage_path('ar'));
         $schedule->command('tntsearch:import App\\AgedReceivablesTotals')->daily()->appendOutputTo(storage_path('tntsearch'));
         $schedule->command('metrc:package1')->daily()->appendOutputTo(storage_path('package.log'));
+        $schedule->command('metrc:items')->hourly()->appendOutputTo(storage_path('metrc_items.log'));
      //   $schedule->command('metrc:update_tags')->hourly()->appendOutputTo(storage_path('package.log'));
       //  $schedule->command('calc:ten_ninety')->daily()->appendOutputTo(storage_path('ten_ninety.log'));
         $schedule->command('backup:run')->daily();

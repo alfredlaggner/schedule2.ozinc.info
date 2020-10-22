@@ -58,15 +58,15 @@ class metrc_items extends Command
         //    dd(($items));
 
 
-/*        $response = $client->request('GET', '/unitsofmeasure/v1/active?licenseNumber=' . $license, $headers);
-        $items = json_decode($response->getBody()->getContents());*/
+        /*        $response = $client->request('GET', '/unitsofmeasure/v1/active?licenseNumber=' . $license, $headers);
+                $items = json_decode($response->getBody()->getContents());*/
 
 
-         //   dd(($items));
+        //   dd(($items));
 
-
+        MetrcItem::truncate();
         for ($i = 0; $i < count($items); $i++) {
-            //     $this->info($packages[$i]->ProductName);
+         //   $this->info($items[$i]->Name);
 
             MetrcItem:: updateOrCreate(
                 ['metrc_id' => $items[$i]->Id],
@@ -74,5 +74,7 @@ class metrc_items extends Command
                     'name' => $items[$i]->Name,
                 ]);
         }
+        $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
+
     }
 }

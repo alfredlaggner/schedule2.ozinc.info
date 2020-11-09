@@ -91,6 +91,7 @@ class Product extends Model
         'available_threshold',
         'outgoing_qty',
         'weight',
-        'list_price'
+        'uom',
+        'unit_size'
     ];
 }

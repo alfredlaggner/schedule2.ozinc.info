@@ -17,9 +17,7 @@ return [
                 /*
                  * The list of directories and files that will be included in the backup.
                  */
-                'include' => [
-                   // base_path(),
-                ],
+                'include' => [],
 
                 /*
                  * These directories and files will be excluded from the backup.
@@ -35,6 +33,11 @@ return [
                  * Determines if symlinks should be followed.
                  */
                 'follow_links' => false,
+
+                /*
+                 * Determines if it should avoid unreadable folders.
+                 */
+                'ignore_unreadable_directories' => true,
             ],
 
             /*
@@ -90,13 +93,14 @@ return [
             /*
              * The filename prefix used for the backup zip file.
              */
-            'filename_prefix' => 'odoo',
+            'filename_prefix' => '',
 
             /*
              * The disk names on which the backups will be stored.
              */
             'disks' => [
                 'local',
+                's3'
             ],
         ],
 
@@ -131,11 +135,11 @@ return [
         'notifiable' => \Spatie\Backup\Notifications\Notifiable::class,
 
         'mail' => [
-            'to' => 'alfred@ozinc.com',
+            'to' => 'alfred.laggner@gmail.com',
 
             'from' => [
-                'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-                'name' => env('MAIL_FROM_NAME', 'Example'),
+                'address' => env('MAIL_FROM_ADDRESS', 'backup@odoo.com'),
+                'name' => env('MAIL_FROM_NAME', 'Daily Backup'),
             ],
         ],
 
@@ -162,7 +166,7 @@ return [
     'monitor_backups' => [
         [
             'name' => env('APP_NAME', 'laravel-backup'),
-            'disks' => ['local'],
+            'disks' => ['local','s3'],
             'health_checks' => [
                 \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumAgeInDays::class => 1,
                 \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumStorageInMegabytes::class => 5000,

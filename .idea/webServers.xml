@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="32bac131-9ddd-4e31-b055-899e0b2958d7" name="schedule2">
+        <fileTransfer rootFolder="/home/forge/schedule2.ozinc.info" accessType="SFTP" host="165.227.4.200" port="22" sshConfigId="f453a3d7-0f0b-42da-b2cd-b45df1452e15" sshConfig="forge@165.227.4.200:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

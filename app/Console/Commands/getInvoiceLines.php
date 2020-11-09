@@ -175,7 +175,7 @@
 					$price_subtotal = $invoice_line->price_subtotal;
 				}
 
-                $this->info($invoice_line->si_category .  " -> " . $invoice_line->si_subcategory);
+      //          $this->info($invoice_line->si_category .  " -> " . $invoice_line->si_subcategory);
 
 				InvoiceLine::where('id', $invoice_line->id)
 					->update([

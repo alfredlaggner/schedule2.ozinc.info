@@ -42,7 +42,7 @@
 			$odoo = new \Edujugon\Laradoo\Odoo();
 			$odoo = $odoo->connect();
 			$categories = $odoo
-                ->where ('#products','>',0)
+                ->where ('product_count','>',0)
 				->fields(
 					'id',
 					'code',

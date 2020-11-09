@@ -3,25 +3,23 @@
 namespace App\Console\Commands;
 
 use App\Margin;
-use App\Product;
+use App\ProductProduct;
 use Illuminate\Console\Command;
 
-class getAllProducts extends Command
+class getProductProduct extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'odoo:products';
-
+    protected $signature = 'odoo:productproducts';
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Get all odoo products';
-
+    protected $description = 'Get product.product';
     /**
      * Create a new command instance.
      *
@@ -59,6 +57,7 @@ class getAllProducts extends Command
                 'qty_available',
                 'sale_ok',
                 'purchase_ok',
+                'x_studio_case_qty',
                 'x_studio_unit_size_unit',
                 'x_studio_unit_size_temp',
                 'x_studio_number_sold',
@@ -68,7 +67,7 @@ class getAllProducts extends Command
                 'outgoing_qty',
                 'weight'
             )
-            ->get('product.template');
+            ->get('product.product');
         //    \DB::table('products')->delete();
 
         for ($i = 0; $i < count($products); $i++) {
@@ -103,7 +102,7 @@ class getAllProducts extends Command
                 }
             }
 //dd( $products[$i]['categ_id']);
-            Product:: updateOrCreate(
+            ProductProduct:: updateOrCreate(
                 [
                     'ext_id' => $products[$i]['id']
                 ],
@@ -133,14 +132,12 @@ class getAllProducts extends Command
                     'weight' => $products[$i]['weight'],
                     'uom' => $products[$i]['x_studio_unit_size_unit'],
                     'unit_size' => $products[$i]['x_studio_unit_size_temp'],
+                    'case_qty' => $products[$i]['x_studio_case_qty'],
                 ]
             );
             if ($products[$i]['active'] == 0) $this->info("not active!");
-//dd($products[$i]);
 
         }
-        $this->call('calc:lastsku');
-        // $this->call('calc:lastbarcode');
 
     }
 }

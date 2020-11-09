@@ -50,7 +50,7 @@ class metrc_get_package extends Command
             ];
 
             $license = 'C11-0000224-LIC';
-            $label = '1A4060300003C35000026976';
+            $label = '1A4060300003C35000012314';
             $response = $client->request('GET', '/packages/v1/' . $label. '?licenseNumber= ' . $license, $headers);
             $items = json_decode($response->getBody()->getContents());
             dd($items);

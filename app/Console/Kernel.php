@@ -33,6 +33,7 @@ class Kernel extends ConsoleKernel
         'App\Console\Commands\metrc_items',
         'App\Console\Commands\metrc_lab_report',
         'App\Console\Commands\metrc_uom',
+        'App\Console\Commands\metrc_strains',
         'App\Console\Commands\getLabtests',
         'App\Console\Commands\metrc_get_package',
         'App\Console\Commands\metrc_make_trans_package',
@@ -49,6 +50,7 @@ class Kernel extends ConsoleKernel
         'App\Console\Commands\emailDueInvoices',
         'App\Console\Commands\getPayments',
         'App\Console\Commands\getAllProducts',
+        'App\Console\Commands\getProductProduct',
         'App\Console\Commands\emailCustomerStatements',
         'App\Console\Commands\update_odoo_products',
         'App\Console\Commands\productImages',
@@ -74,8 +76,8 @@ class Kernel extends ConsoleKernel
     {
 		date_default_timezone_set('America/Los_Angeles');
 
-        $schedule->command('odoo:brands')->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('brands.log'));
-        $schedule->command('odoo:images')->everyFiveMinutes()->withoutOverlapping()->appendOutputTo(storage_path('images.log'));
+        $schedule->command('odoo:brands')->daily()->withoutOverlapping()->appendOutputTo(storage_path('brands.log'));
+        $schedule->command('odoo:images')->daily()->withoutOverlapping()->appendOutputTo(storage_path('images.log'));
 		$schedule->command('odoo:housekeeping')->hourly()->withoutOverlapping()->appendOutputTo(storage_path('housekeeping.log'));
 
         $schedule->command('odoo:salesorder')->everyFiveMinutes()->withoutOverlapping()->appendOutputTo(storage_path('salesorder.log'));
@@ -98,7 +100,8 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('calc:lastsku')->everyMinute()->appendOutputTo(storage_path('lastSku.log'));
         $schedule->command('odoo:margin')->daily()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('margin.log'));
-        $schedule->command('odoo:products')->everyFiveMinutes()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('margin.log'));
+        $schedule->command('odoo:products')->everyFiveMinutes()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('product.log'));
+        $schedule->command('odoo:productproducts')->daily()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('productproduct.log'));
         $schedule->command('odoo:salespersons')->daily()->appendOutputTo(storage_path('salesperson.log'));
         $schedule->command('odoo:customers')->daily()->appendOutputTo(storage_path('customers.log'));
         $schedule->command('odoo:getstock')->daily()->appendOutputTo(storage_path('getstock.log'));
@@ -111,8 +114,9 @@ class Kernel extends ConsoleKernel
         $schedule->command('odoo:payments')->hourly()->appendOutputTo(storage_path('payments.log'));
 		$schedule->command('calc:ar_to_collect')->weeklyOn(1, '6:00')->appendOutputTo(storage_path('ar'));
         $schedule->command('tntsearch:import App\\AgedReceivablesTotals')->daily()->appendOutputTo(storage_path('tntsearch'));
-        $schedule->command('metrc:package1')->daily()->appendOutputTo(storage_path('package.log'));
-        $schedule->command('metrc:items')->cron('0 */2 * * *')->appendOutputTo(storage_path('metrc_items.log'));
+        $schedule->command('metrc:package1')->daily()->appendOutputTo(storage_path('metrc_package.log'));
+        $schedule->command('metrc:items')->hourly()->appendOutputTo(storage_path('metrc_items.log'));
+        $schedule->command('metrc:strains')->hourly()->appendOutputTo(storage_path('metrc_strains.log'));
      //   $schedule->command('metrc:update_tags')->hourly()->appendOutputTo(storage_path('package.log'));
       //  $schedule->command('calc:ten_ninety')->daily()->appendOutputTo(storage_path('ten_ninety.log'));
         $schedule->command('backup:run')->daily();

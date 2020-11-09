@@ -55,23 +55,32 @@ class metrc_items extends Command
 
         $response = $client->request('GET', '/items/v1/active?licenseNumber=' . $license, $headers);
         $items = json_decode($response->getBody()->getContents());
-        //    dd(($items));
+    //    dd(($items));
 
 
         /*        $response = $client->request('GET', '/unitsofmeasure/v1/active?licenseNumber=' . $license, $headers);
                 $items = json_decode($response->getBody()->getContents());*/
 
 
-        //   dd(($items));
+      //  dd(($items));
 
         MetrcItem::truncate();
         for ($i = 0; $i < count($items); $i++) {
-         //   $this->info($items[$i]->Name);
+            //   $this->info($items[$i]->Name);
 
             MetrcItem:: updateOrCreate(
-                ['metrc_id' => $items[$i]->Id],
                 [
+                    'metrc_id' => $items[$i]->Id,
                     'name' => $items[$i]->Name,
+                    'category_name' => $items[$i]->ProductCategoryName,
+                    'category_type' => $items[$i]->ProductCategoryType,
+                    'quantity_type' => $items[$i]->QuantityType,
+                    'unit_quantity'  => $items[$i]->UnitQuantity,
+                    'quantity_uom' => $items[$i]->UnitQuantityUnitOfMeasureName,
+                    'volume_uom' => $items[$i]->UnitVolumeUnitOfMeasureName,
+                    'unit_weight' => $items[$i]->UnitWeight,
+                    'unit_volume' => $items[$i]->UnitVolume,
+                    'is_used' => $items[$i]->IsUsed,
                 ]);
         }
         $this->info(date_format(date_create(), 'Y-m-d H:i:s'));

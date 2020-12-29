@@ -47,39 +47,39 @@ class getCostomers extends Command
                 $id = $odoo->create('res.partner',['name' => 'John Odoo']);*/
 
         $customers = $odoo->fields(
-                'id',
-                'is_company',
-                'display_name',
-                'name',
-                'street',
-                'street2',
-                'city',
-                'zip',
-                'website',
-                'phone',
-                'email',
-                'user_id',
-                'sale_order_count',
-                /*                'total_due',
-                                'total_overdue',*/
-                'partner_latitude',
-                'partner_longitude',
-                'x_studio_field_mu5dT',
-                'x_studio_field_WzUo6',
-                'x_studio_field_DN9mZ',
-                'x_studio_field_api_id',
-                'x_studio_field_0tSf6',
-                'x_studio_reference_id',
-                'x_studio_license_type',
-                'x_studio_bcc_business_name',
-                'x_studio_territory',
-                'x_studio_field_Bwbev'
-            )
+            'id',
+            'is_company',
+            'display_name',
+            'name',
+            'street',
+            'street2',
+            'city',
+            'zip',
+            'website',
+            'phone',
+            'email',
+            'user_id',
+            'sale_order_count',
+            'total_due',
+            'total_overdue',
+            'partner_latitude',
+            'partner_longitude',
+            'x_studio_field_mu5dT',
+            'x_studio_field_WzUo6',
+            'x_studio_field_DN9mZ',
+            'x_studio_field_api_id',
+            'x_studio_field_0tSf6',
+            'x_studio_reference_id',
+            'x_studio_license_type',
+            'x_studio_bcc_business_name',
+            'x_studio_territory',
+            'x_studio_field_Bwbev'
+        )
             ->get('res.partner');
-     //   dd($customers);
+        //   dd($customers);
         for ($i = 0; $i < count($customers); $i++) {
 
-         //   $this->info($customers[$i]['email']);
+            //   $this->info($customers[$i]['email']);
             if (!$customers[$i]['street2']) {
                 $street2 = NULL;
             } else {
@@ -92,14 +92,14 @@ class getCostomers extends Command
                 ],
                 [
                     'ext_id_contact' => $customers[$i]['id'],
-                    'name' => preg_replace("/[^a-zA-Z0-9\s]/", " ", $customers[$i]['display_name']),
+                    'name' => preg_replace("/[^a-zA-Z0-9_\s]/", " ", $customers[$i]['display_name']),
                     'street' => $customers[$i]['street'],
                     'street2' => $street2,
                     'city' => $customers[$i]['city'],
                     'zip' => $customers[$i]['zip'],
                     'website' => $customers[$i]['website'],
-/*                    'latitude' => $customers[$i]['partner_latitude'],
-                    'longitude' => $customers[$i]['partner_longitude'],*/
+                    /*                    'latitude' => $customers[$i]['partner_latitude'],
+                                        'longitude' => $customers[$i]['partner_longitude'],*/
                     'phone' => $customers[$i]['phone'],
                     'email' => $customers[$i]['email'],
                     'license' => substr($customers[$i]['x_studio_field_mu5dT'], 0, 20),
@@ -115,8 +115,8 @@ class getCostomers extends Command
                     'bcc_business_name' => $customers[$i]['x_studio_bcc_business_name'],
                     'territory' => $customers[$i]['x_studio_territory'],
 
-/*                    'total_due' => $customers[$i]['total_due'],
-                    'total_overdue' => $customers[$i]['total_overdue'],*/
+                    'total_due' => $customers[$i]['total_due'],
+                    'total_overdue' => $customers[$i]['total_overdue'],
 
                 ]);
         }

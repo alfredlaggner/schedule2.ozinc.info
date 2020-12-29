@@ -74,6 +74,7 @@ class Payment extends Model
         'amount_untaxed',
         'amount_due',
         'payment_difference',
+        'payment_amount',
         'tax',
         'multi',
         'has_invoices',

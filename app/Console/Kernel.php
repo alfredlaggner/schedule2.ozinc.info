@@ -28,15 +28,6 @@ class Kernel extends ConsoleKernel
 		'App\Console\Commands\ar_set_values_to_collect',
 		'App\Console\Commands\temp',
         'App\Console\Commands\housekeeping',
-        'App\Console\Commands\metrc_packageV0',
-        'App\Console\Commands\metrc_create_package',
-        'App\Console\Commands\metrc_items',
-        'App\Console\Commands\metrc_lab_report',
-        'App\Console\Commands\metrc_uom',
-        'App\Console\Commands\metrc_strains',
-        'App\Console\Commands\getLabtests',
-        'App\Console\Commands\metrc_get_package',
-        'App\Console\Commands\metrc_make_trans_package',
         'App\Console\Commands\MetrcUpdateTags',
         'App\Console\Commands\putLicenseNumbers',
         'App\Console\Commands\count_sales_per_product',
@@ -49,6 +40,7 @@ class Kernel extends ConsoleKernel
         'App\Console\Commands\calcTenNinetyBiMonthly',
         'App\Console\Commands\emailDueInvoices',
         'App\Console\Commands\getPayments',
+        'App\Console\Commands\getPayments_AR',
         'App\Console\Commands\getAllProducts',
         'App\Console\Commands\getProductProduct',
         'App\Console\Commands\emailCustomerStatements',
@@ -58,6 +50,18 @@ class Kernel extends ConsoleKernel
         'App\Console\Commands\put_all_companies',
         'App\Console\Commands\check_logs',
         'App\Console\Commands\ResetOdooCommissions',
+        'App\Console\Commands\metrc_packageV0',
+        'App\Console\Commands\metrc_create_package',
+        'App\Console\Commands\metrc_items',
+        'App\Console\Commands\metrc_lab_report',
+        'App\Console\Commands\metrc_uom',
+        'App\Console\Commands\metrc_strains',
+        'App\Console\Commands\getLabtests',
+        'App\Console\Commands\metrc_get_package',
+        'App\Console\Commands\metrc_get_package',
+        'App\Console\Commands\metrc_update_package',
+        'App\Console\Commands\metrc_make_trans_package',
+
     ];
 
 	protected function scheduleTimezone()
@@ -112,6 +116,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('odoo:invoices')->hourly()->withoutOverlapping()->appendOutputTo(storage_path('invoices.log'));
         $schedule->command('calc:ar')->hourly()->appendOutputTo(storage_path('ar.log'));
         $schedule->command('odoo:payments')->hourly()->appendOutputTo(storage_path('payments.log'));
+        $schedule->command('odoo:payments_AR')->daily()->appendOutputTo(storage_path('payments.log'));
 		$schedule->command('calc:ar_to_collect')->weeklyOn(1, '6:00')->appendOutputTo(storage_path('ar'));
         $schedule->command('tntsearch:import App\\AgedReceivablesTotals')->daily()->appendOutputTo(storage_path('tntsearch'));
         $schedule->command('metrc:package1')->daily()->appendOutputTo(storage_path('metrc_package.log'));

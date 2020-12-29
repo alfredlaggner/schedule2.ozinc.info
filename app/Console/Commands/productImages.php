@@ -73,18 +73,20 @@
                     ]
                 );
 
-
+$this->info($i);
             }
 
             $attachments = Attachment::get();
             foreach ($attachments as $attachment) {
-     //           $this->info($attachment->name);
+              //  $this->info($attachment->name);
                 $base64_image = $attachment->image;
 
                 $data = base64_decode($base64_image);
                 $name = $attachment->ext_id . ".png";
                 Storage::disk('public')->put($name, $data,'public');
                 $path = Storage::disk('local')->path($name);
+                $this->info($path);
+
             }
             $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
         }

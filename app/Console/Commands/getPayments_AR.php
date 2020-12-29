@@ -10,16 +10,17 @@ use Illuminate\Console\Command;
 use App\Invoice;
 use App\User;
 use App\Payment;
+use App\PaymentAr;
 use Carbon\Carbon;
 
-class getPayments extends Command
+class getPayments_AR extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'odoo:payments';
+    protected $signature = 'odoo:payments_AR';
 
     /**
      * The console command description.
@@ -49,7 +50,7 @@ class getPayments extends Command
         $start = new Carbon(now());
         $start = substr($start->firstOfMonth(), 0, 10);
 
-        $start = '2020-01-01';
+        $start = '2018-01-01';
 
         $current_month = Carbon::now()->month;
 
@@ -88,7 +89,7 @@ class getPayments extends Command
             for ($z = 0; $z < $invoice_count; $z++) {
                 $invoice_id = $invoices[$z];
 
-                Payment:: updateOrCreate(
+                PaymentAr:: updateOrCreate(
                     [
                         'ext_id' => $payments[$i]['id'],
                         'invoice_id' => $invoice_id,
@@ -118,24 +119,24 @@ class getPayments extends Command
 
             }
         }
-        Payment::where('has_invoices', '=', false)->delete();
+        PaymentAr::where('has_invoices', '=', false)->delete();
 
-        Payment::leftJoin('invoices', 'invoices.ext_id', '=', 'payments.invoice_id')
+        PaymentAr::leftJoin('invoices', 'invoices.ext_id', '=', 'payment_ars.invoice_id')
             ->update([
-                'payments.sales_person_id' => DB::raw('invoices.sales_person_id'),
-                'payments.invoice_date' => DB::raw('invoices.invoice_date'),
-                'payments.sales_order' => DB::raw('invoices.sales_order'),
-                'payments.amount_untaxed' => DB::raw('invoices.amount_untaxed'),
-                'payments.amount_taxed' => DB::raw('invoices.amount_total'),
-                'payments.amount' => DB::raw('invoices.amount_untaxed'),
-                'payments.tax' => DB::raw('invoices.amount_tax'),
-                'payments.invoice_state' => DB::raw('invoices.state'),
-                'payments.amount_due' => DB::raw('invoices.residual'),
+                'payment_ars.sales_person_id' => DB::raw('invoices.sales_person_id'),
+                'payment_ars.invoice_date' => DB::raw('invoices.invoice_date'),
+                'payment_ars.sales_order' => DB::raw('invoices.sales_order'),
+                'payment_ars.amount_untaxed' => DB::raw('invoices.amount_untaxed'),
+                'payment_ars.amount_taxed' => DB::raw('invoices.amount_total'),
+                'payment_ars.amount' => DB::raw('invoices.amount_untaxed'),
+                'payment_ars.tax' => DB::raw('invoices.amount_tax'),
+                'payment_ars.invoice_state' => DB::raw('invoices.state'),
+                'payment_ars.amount_due' => DB::raw('invoices.residual'),
             ]);
 
 
         $amount = 0.00;
-        $payments = Payment::whereNotNull('invoice_date')
+        $payments = PaymentAr::whereNotNull('invoice_date')
             ->where('payment_date', '>=', $start)
             ->get();
         foreach ($payments as $payment) {
@@ -150,35 +151,13 @@ class getPayments extends Command
                             //    dd($amount_due);
                             $commission = 0.00;
                         }*/
-            Payment::where('id', $payment->id)->update([
+            PaymentAr::where('id', $payment->id)->update([
                 'year_invoiced' => Carbon::createFromFormat('Y-m-d', $payment->invoice_date)->year,
                 'month_invoiced' => Carbon::createFromFormat('Y-m-d', $payment->invoice_date)->month,
                 'commission' => $commission,
             ]);
         }
 
-        $query = Invoice::select(
-            '*',
-            'payments.amount as payments_amount',
-            'payments.payment_date as payments_payment_date',
-            'payments.invoice_id as payments_invoice_id')
-            ->join('payments', 'payments.invoice_id', '=', 'invoices.ext_id')
-            ->where('invoices.invoice_date', '>=', '2020-01-01')
-            ->orderBy('payments_payment_date', 'desc')
-            ->get();
-
-        foreach ($query as $q) {
-//$this->info($q->invoice_date);
-            Invoice::where('ext_id', $q->payments_invoice_id)
-                ->update(['invoices.payment_amount' => $q->payments_amount,
-                    'invoices.payment_date' => $q->payments_payment_date,
-                    'invoices.payment_invoice_id' => $q->payments_invoice_id,]);
-            /*            $this->info($q->payments_payment_date);
-                        $this->info($q->payments_amount);*/
-        }
-    //    dd("halt");
-
-        Payment::where('invoice_state', 'open')->delete();
 
         $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
 

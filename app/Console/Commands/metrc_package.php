@@ -69,18 +69,18 @@ class metrc_package extends Command
 
         $today = Carbon::today()->toDateString();
         $yesterday = Carbon::now()->subDays(1)->toDateString();
-        for ($j = 0; $j <= 35; $j++) {
+        for ($j = 0; $j <= 500; $j++) {
             $today = Carbon::today()->subDays($j)->toDateString();
             $yesterday = Carbon::now()->subDays($j + 1)->toDateString();
-           // $this->info("yesterday= " . $yesterday . "today= " . $today);
-
+            //$this->info("yesterday= " . $yesterday . "today= " . $today);
+         //   $this->info($j);
             //   dd('xxx');
             $response_string = '&lastModifiedStart=' . $yesterday . 'T06:30:00Z&lastModifiedEnd=' . $today . 'T06:30:00Z';
-         //   $this->info($response_string);
+            //   $this->info($response_string);
             $response = $client->request('GET', '/packages/v1/active?licenseNumber=' . $license . $response_string, $headers);
             $packages = json_decode($response->getBody()->getContents());
-     //        dd($packages);
-           // $this->info(count($packages));
+            //        dd($packages);
+            // $this->info(count($packages));
 
             //     DB::table('metrc_packages');
 
@@ -95,12 +95,12 @@ class metrc_package extends Command
                 $products = Product::where('name', 'LIKE', $product_name)->first();
                 //    $query->whereRaw('LOWER(`newsTitle`) LIKE ? ',[trim(strtolower($newsTitle)).'%']);
                 if ($products) {
-                //    $this->info('Product found: ' . $products->name);
+                    //    $this->info('Product found: ' . $products->name);
 
                     $product_id = $products->ext_id;
                     $ref = $products->code;
                 } else {
-                //    $this->info($product_name);
+                    //    $this->info($product_name);
                     MetrcNoProduct::updateOrCreate([
                         'product_name' => $product_name
                     ]);
@@ -121,36 +121,38 @@ class metrc_package extends Command
                         'date' => $packages[$i]->PackagedDate,
                     ]);
 
-                $user = Package::where('quantity','<=', 0);
+                $user = Package::where('quantity', '<=', 0);
                 $user->delete();
             }
-          //  $this->update_odoo();
+            //  $this->update_odoo();
             $this->mark_used_tags();
             sleep(4);
         }
         $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
     }
 
-public function mark_used_tags(){
-$packages = Package::get();
-foreach ($packages as $package){
-    MetrcTag::where('tag','=',$package->tag)
-           ->update(['is_used' => 1,'used_at' => Carbon::now()]);
-   }
-}
+    public function mark_used_tags()
+    {
+        $packages = Package::get();
+        foreach ($packages as $package) {
+            MetrcTag::where('tag', '=', $package->tag)
+                ->update(['is_used' => 1, 'used_at' => Carbon::now()]);
+        }
+    }
+
     public function update_odoo()
     {
         $odoo = new \Edujugon\Laradoo\Odoo();
         $odoo = $odoo->connect();
 
         $today = Carbon::today()->toDateString();
-     //   $this->info($today);
+        //   $this->info($today);
         $packages = Package::where('product_id', '>', 0)->where('created_at', '=', $today)->get();
-     //   $this->info('to update: ' . $packages->count());
+        //   $this->info('to update: ' . $packages->count());
         foreach ($packages as $package) {
-/*           $this->info($package->tag);
-            $this->info($package->product_id);
-            $this->info($package->quantity);*/
+            /*           $this->info($package->tag);
+                        $this->info($package->product_id);
+                        $this->info($package->quantity);*/
 
             $updated = $odoo->create('stock.production.lot', [
                 'name' => $package->tag,
@@ -167,7 +169,7 @@ foreach ($packages as $package){
         foreach ($packages as $package) {
             $products = Product::where('name', 'like', ($package->item))->first();
             if ($products) {
-            //    $this->info(($package->item . ' = ' . $products->name));
+                //    $this->info(($package->item . ' = ' . $products->name));
                 $package->product_id = $products->ext_id;
                 $package->update();
             }

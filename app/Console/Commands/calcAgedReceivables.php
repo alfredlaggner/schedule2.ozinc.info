@@ -53,6 +53,7 @@
 							sum(residual) as sum_residual
 							"
             ))
+     //           ->where('customer_id',1293)
                 ->groupBy('customer_id')
                 ->orderBy('customer_name')
                 ->get();
@@ -101,7 +102,7 @@
                     ->where('residual', '!=', 0)
                     ->get();
 
-
+//dd($invoices->toarray());
                 foreach ($invoices as $invoice) {
                     $rank = [];
                     for ($i = 0; $i < 9; $i++) {
@@ -213,10 +214,10 @@
                         ]);
                 }
             }
-            \Artisan::call('scout:flush App\\\AgedReceivables');
+/*            \Artisan::call('scout:flush App\\\AgedReceivables');
             \Artisan::call('scout:import App\\\AgedReceivables');
             \Artisan::call('scout:flush App\\\AgedReceivablesTotal');
-            \Artisan::call('scout:import App\\\AgedReceivablesTotal');
+            \Artisan::call('scout:import App\\\AgedReceivablesTotal');*/
 
             $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
         }

@@ -57,7 +57,7 @@ use Laravel\Scout\Searchable;
  */
 class AgedReceivables extends Model
 {
-    use Searchable;
+   /* use Searchable;
     public function toSearchableArray()
     {
         $array = $this->toArray();
@@ -66,6 +66,7 @@ class AgedReceivables extends Model
 
         return $array;
     }
+    */
     protected $fillable = [
         'salesorder_id',
         'rep_id',

@@ -53,7 +53,7 @@ class metrc_get_package extends Command
             $label = '1A406030001281E000004142';
             $response = $client->request('GET', '/packages/v1/' . $label. '? licenseNumber = ' . $license, $headers);
             $items = json_decode($response->getBody()->getContents());
-            dd($items);
+       //     dd($items);
         }
     }
 }

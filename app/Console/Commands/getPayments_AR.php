@@ -61,6 +61,7 @@ class getPayments_AR extends Command
             ->where('state', '=', 'posted')
             ->where('partner_type', '=', 'customer')
             ->where('has_invoices', '=', true)
+       //    ->where('id', '=', 9210)
             ->fields(
                 'id',
                 'name',
@@ -80,6 +81,9 @@ class getPayments_AR extends Command
                             'x_studio_field_vOTbZ'*/
             )
             ->get('account.payment');
+
+    //    dd($payments);
+
         for ($i = 0; $i < count($payments); $i++) {
 
             $invoices = $payments[$i]['invoice_ids'];
@@ -119,7 +123,7 @@ class getPayments_AR extends Command
 
             }
         }
-        PaymentAr::where('has_invoices', '=', false)->delete();
+    //    PaymentAr::where('has_invoices', '=', false)->delete();
 
         PaymentAr::leftJoin('invoices', 'invoices.ext_id', '=', 'payment_ars.invoice_id')
             ->update([

@@ -79,7 +79,7 @@ class metrc_package extends Command
             //   $this->info($response_string);
             $response = $client->request('GET', '/packages/v1/active?licenseNumber=' . $license . $response_string, $headers);
             $packages = json_decode($response->getBody()->getContents());
-            //        dd($packages);
+                    dd($packages);
             // $this->info(count($packages));
 
             //     DB::table('metrc_packages');

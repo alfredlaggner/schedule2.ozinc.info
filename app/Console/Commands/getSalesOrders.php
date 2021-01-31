@@ -44,7 +44,7 @@ class getSalesOrders extends Command
         $odoo = $odoo->connect();
         $orders = $odoo
             //->where( 'create_date', '>=',  date('Y-m-d', strtotime("-999 days")))
-            // ->where('display_name', '=', 'SO3261')
+      //       ->where('id', '=', 13144)
           //  ->limit(10)
             ->fields(
                 'id',
@@ -65,11 +65,13 @@ class getSalesOrders extends Command
                 'activity_state'
             )
             ->get('sale.order');
+    //    dd($orders);
         for ($i = 0; $i < count($orders); $i++) {
             $order_date = ($orders[$i]['date_order'] == true) ? date_format(date_create($orders[$i]['date_order']), "Y-m-d") : NULL;
+            $order_date_stamped = ($orders[$i]['date_order'] == true) ? date_format(date_create($orders[$i]['date_order']), "Y-m-d H:i:s") : NULL;
             $create_date = ($orders[$i]['create_date'] == true) ? date_format(date_create($orders[$i]['create_date']), "Y-m-d") : NULL;
             $write_date = ($orders[$i]['write_date'] == true) ? date_format(date_create($orders[$i]['write_date']), "Y-m-d") : NULL;
-            $confirmation_date = ($orders[$i]['confirmation_date'] == true) ? date_format(date_create($orders[$i]['confirmation_date']), "Y-m-d h:i:s") : NULL;
+            $confirmation_date = ($orders[$i]['confirmation_date'] == true) ? date_format(date_create($orders[$i]['confirmation_date']), "Y-m-d H:i:s") : NULL;
             SalesOrder:: updateOrCreate(
                 ['ext_id' => $orders[$i]['id']],
                 [
@@ -77,6 +79,7 @@ class getSalesOrders extends Command
                     'state' => $orders[$i]['state'],
                     'create_date' => $create_date,
                     'order_date' => $order_date,
+                    'order_date_stamped' => $order_date_stamped,
                     'confirmation_date' => $confirmation_date,
                     'write_date' => $order_date,
                     'invoice_status' => $orders[$i]['invoice_status'],

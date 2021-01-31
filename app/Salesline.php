@@ -129,6 +129,12 @@ class Salesline extends Model
 			'margin',
 			'amount',
             'sales_person_id',
-			'is_updated'
+			'is_updated',
+            'category_full',
+            'cat_sub1',
+            'cat_sub2',
+            'cat_sub3',
+            'cat_sub4',
+            'cat_sub5',
 		];
 	}

@@ -68,6 +68,7 @@ class getProductProduct extends Command
                 'weight'
             )
             ->get('product.product');
+
         //    \DB::table('products')->delete();
 
         for ($i = 0; $i < count($products); $i++) {

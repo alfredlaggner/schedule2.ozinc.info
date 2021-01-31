@@ -86,10 +86,10 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('odoo:salesorder')->everyFiveMinutes()->withoutOverlapping()->appendOutputTo(storage_path('salesorder.log'));
 
-        $schedule->command('odoo:saleslines')->hourly()->runInBackground()->withoutOverlapping()->appendOutputTo(storage_path('saleslines_minute.log'));
-        $schedule->command('odoo:saleslines /-6/ months')
+        $schedule->command('odoo:saleslines /-1/ day')->hourly()->runInBackground()->withoutOverlapping()->appendOutputTo(storage_path('saleslines_minute.log'));
+/*        $schedule->command('odoo:saleslines /-6/ months')
             ->daily()
-			->runInBackground()->appendOutputTo(storage_path('saleslines_daily.log'));
+			->runInBackground()->appendOutputTo(storage_path('saleslines_daily.log'));*/
 
 
         $schedule->command('odoo:invoice_lines /-1/ day')->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('invoice_lines_minute.log'));
@@ -98,9 +98,9 @@ class Kernel extends ConsoleKernel
 			->runInBackground()->appendOutputTo(storage_path('invoice_lines_daily.log'));
 
         $schedule->command('odoo:invoicelines  /-1/ day')->hourly()->withoutOverlapping()->appendOutputTo(storage_path('invoicelines_hourly.log'));
-        $schedule->command('odoo:invoicelines  /-6/ months')
+/*        $schedule->command('odoo:invoicelines  /-6/ months')
             ->daily()->withoutOverlapping()
-			->runInBackground()->appendOutputTo(storage_path('invoicelines_daily.log'));
+			->runInBackground()->appendOutputTo(storage_path('invoicelines_daily.log'));*/
 
         $schedule->command('calc:lastsku')->everyMinute()->appendOutputTo(storage_path('lastSku.log'));
         $schedule->command('odoo:margin')->daily()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('margin.log'));

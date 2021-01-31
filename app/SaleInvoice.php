@@ -125,6 +125,8 @@ class SaleInvoice extends Model
         'customer_id',
         'ext_id',
         'order_date',
+        'order_date_stamped',
+        'confirmation_date',
         'invoice_date',
         'driver_log_id',
         'order_id',
@@ -139,6 +141,7 @@ class SaleInvoice extends Model
         'quantity',
         'ext_id_unit',
         'unit_price',
+        'amount',
         'sales_person_id',
         'code', 'cost',
         'margin',
@@ -146,8 +149,15 @@ class SaleInvoice extends Model
         'comm_region',
         'comm_percent',
         'quantity_corrected',
+        'category_full',
+        'cat_sub1',
+        'cat_sub2',
+        'cat_sub3',
+        'cat_sub4',
+        'cat_sub5',
         'updated_at',
-        'created_at'];
+        'created_at'
+    ];
 
 /*    protected static function boot()
     {

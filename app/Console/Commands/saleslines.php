@@ -65,6 +65,7 @@ class saleslines extends Command
             invoice_lines.category as category,
             invoice_lines.brand_id as brand_id,
             invoice_lines.ext_id as ext_id,
+            product_products.category_full as product_category_full,
             invoice_lines.sales_person_id as invoice_lines_salesPerson_id,
             commissions_paids.paid_at as commissions_paids_paid_at,
             commissions_paids.created_at as  commissions_paids_created_at
@@ -72,6 +73,7 @@ class saleslines extends Command
             ->leftJoin('sales_persons', 'sales_persons.sales_person_id', '=', 'invoice_lines.sales_person_id')
             ->leftJoin('customers', 'customers.ext_id', '=', 'invoice_lines.customer_id')
             ->leftJoin('commissions_paids', 'commissions_paids.ext_id', '=', 'invoice_lines.ext_id')
+            ->leftJoin('product_products', 'product_products.ext_id', '=', 'invoice_lines.product_id')
             ->where('invoice_lines.order_date', '>=', date('Y-m-d', strtotime($retrieve_from)))
             ->where('invoice_lines.sales_person_id', '>', 0)
             ->where('invoice_lines.margin', '>', -100)
@@ -80,9 +82,39 @@ class saleslines extends Command
             ->get();
 
         //	dd($queries->count());
+        $cat_sub1 = '';
+        $cat_sub2 = '';
+        $cat_sub3 = '';
+        $cat_sub4 = '';
+        $cat_sub5 = '';
+
         foreach ($queries as $q) {
             $amount_tax = $q->amount * 0.24;
             $amount_total = $q->amount + $amount_tax;
+
+            $cats = explode('/', $q->category_full);
+            $this->info($q->category_full);
+
+            $cat_length = sizeof($cats);
+            $this->info($cat_length);
+            if ($cat_length >= 1) {
+                $cat_sub1 = trim($cats[0]);
+            }
+            if ($cat_length >= 2) {
+                $cat_sub2 = trim($cats[1]);
+            }
+            if ($cat_length >= 3) {
+                $cat_sub3 = trim($cats[2]);
+            }
+            if ($cat_length >= 4) {
+                $cat_sub4 = trim($cats[3]);
+                //    dd($cats);
+            }
+            if ($cat_length >= 5) {
+                $cat_sub5 = trim($cats[4]);
+            }
+
+
             Salesline::updateOrCreate(
                 ['ext_id' => $q->ext_id],
                 ['order_number' => $q->invoice_number,
@@ -118,8 +150,14 @@ class saleslines extends Command
                     'product_id' => $q->product_id,
                     'margin' => $q->margin,
                     'amount' => $q->amount,
+                    'category_full' => $q->product_category_full,
+                    'cat_sub1' => $cat_sub1,
+                    'cat_sub2' => $cat_sub2,
+                    'cat_sub3' => $cat_sub3,
+                    'cat_sub4' => $cat_sub4,
+                    'cat_sub5' => $cat_sub5
                 ]);
-         //       $this->info($q->invoice_lines_salesPerson_id);
+            //       $this->info($q->invoice_lines_salesPerson_id);
 
         }
         /*        DB::table('saleslines')->delete();

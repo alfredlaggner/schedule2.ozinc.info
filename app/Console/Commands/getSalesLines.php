@@ -102,7 +102,7 @@ class getSalesLines extends Command
         $code = '';
         $margin = 0;
 
-    //    SaleInvoice::where('order_date', '>=', date('Y-m-d', strtotime($retrieve_from)))->delete();
+        SaleInvoice::where('order_date', '>=', date('Y-m-d', strtotime($retrieve_from)))->delete();
 //dd("test");
 
         for ($i = 0; $i < count($order_lines); $i++) {

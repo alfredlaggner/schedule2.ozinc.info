@@ -97,7 +97,7 @@ class Kernel extends ConsoleKernel
             ->daily()->withoutOverlapping()
 			->runInBackground()->appendOutputTo(storage_path('invoice_lines_daily.log'));
 
-        $schedule->command('odoo:invoicelines  /-1/ day')->hourly()->withoutOverlapping()->appendOutputTo(storage_path('invoicelines_hourly.log'));
+        $schedule->command('odoo:invoicelines  /-1/ day')->daily()->withoutOverlapping()->appendOutputTo(storage_path('invoicelines_hourly.log'));
 /*        $schedule->command('odoo:invoicelines  /-6/ months')
             ->daily()->withoutOverlapping()
 			->runInBackground()->appendOutputTo(storage_path('invoicelines_daily.log'));*/

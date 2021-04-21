@@ -45,4 +45,9 @@ class Invoice extends Model
         return $this->belongsTo('App\Customer', 'customer_id', 'ext_id');
     }
 
+    public function inactive_user()
+    {
+        return $this->hasOne(UserInactive::class, 'sales_person_id', 'sales_person_id');
+    }
+
 }

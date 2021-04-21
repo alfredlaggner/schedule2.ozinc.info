@@ -19,6 +19,7 @@ class Customer extends Model
         'license2','license_expiration2',
         'street',
         'name',
+        'display_name',
         'street2',
         'city',
         'zip',
@@ -51,6 +52,11 @@ class Customer extends Model
     public function sales_orders()
     {
         return $this->hasMany('App\SalesOrder', 'customer_id', 'ext_id');
+    }
+
+    public function inactive_user()
+    {
+        return $this->hasOne(UserInactive::class, 'sales_person_id', 'user_id');
     }
 
     public function toSearchableArray()

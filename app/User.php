@@ -75,6 +75,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Invoice', 'sales_person_id', 'sales_person_id');
     }
+    public function inactive_user()
+    {
+        return $this->hasOne('App\UserInactive', 'sales_person_id', 'sales_person_id');
+    }
 
 
 }

@@ -139,6 +139,10 @@ class InvoiceLine extends Model
     {
         return $this->belongsTo('App\Customer', 'ext_id_shipping', 'ext_id');
     }
+    public function InactiveUser()
+    {
+        return $this->hasOne(UserInactive::class, 'sales_person_id', 'sales_person_id');
+    }
 
     public function product()
     {

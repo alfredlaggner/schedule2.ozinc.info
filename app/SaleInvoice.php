@@ -155,6 +155,7 @@ class SaleInvoice extends Model
         'cat_sub3',
         'cat_sub4',
         'cat_sub5',
+        'cat_sub6',
         'updated_at',
         'created_at'
     ];

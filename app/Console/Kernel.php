@@ -61,6 +61,15 @@ class Kernel extends ConsoleKernel
         'App\Console\Commands\metrc_get_package',
         'App\Console\Commands\metrc_update_package',
         'App\Console\Commands\metrc_make_trans_package',
+        'App\Console\Commands\metrc_get_manifests',
+        'App\Console\Commands\simSendAccounts',
+        'App\Console\Commands\simDeptorUpdate',
+        'App\Console\Commands\simDeptorSearch',
+        'App\Console\Commands\simPaymentAdd',
+        'App\Console\Commands\setInactiveUsers',
+        'App\Console\Commands\send_inactive_reps',
+        'App\Console\Commands\sendCollectionUser',
+        'App\Console\Commands\getBccLicenses',
 
     ];
 
@@ -87,9 +96,9 @@ class Kernel extends ConsoleKernel
         $schedule->command('odoo:salesorder')->everyFiveMinutes()->withoutOverlapping()->appendOutputTo(storage_path('salesorder.log'));
 
         $schedule->command('odoo:saleslines /-1/ day')->hourly()->runInBackground()->withoutOverlapping()->appendOutputTo(storage_path('saleslines_minute.log'));
-/*        $schedule->command('odoo:saleslines /-6/ months')
-            ->daily()
-			->runInBackground()->appendOutputTo(storage_path('saleslines_daily.log'));*/
+       $schedule->command('odoo:saleslines /-6/ months')
+            ->weekly()
+			->runInBackground()->appendOutputTo(storage_path('saleslines_daily.log'));
 
 
         $schedule->command('odoo:invoice_lines /-1/ day')->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('invoice_lines_minute.log'));
@@ -114,7 +123,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('calc:paid_commissions')->daily()->appendOutputTo(storage_path('paid_commissions.log'));
         $schedule->command('calc:ten_ninety_bi')->daily()->appendOutputTo(storage_path('ten_ninety_bi.log'));
         $schedule->command('odoo:invoices')->hourly()->withoutOverlapping()->appendOutputTo(storage_path('invoices.log'));
-        $schedule->command('calc:ar')->hourly()->appendOutputTo(storage_path('ar.log'));
+        $schedule->command('set:inactive_users')->hourly()->appendOutputTo(storage_path('ar.log'));
+        $schedule->command('calc:ar')->hourly()->appendOutputTo(storage_path('set_inactive.log'));
         $schedule->command('odoo:payments')->hourly()->appendOutputTo(storage_path('payments.log'));
         $schedule->command('odoo:payments_AR')->daily()->appendOutputTo(storage_path('payments.log'));
 		$schedule->command('calc:ar_to_collect')->weeklyOn(1, '6:00')->appendOutputTo(storage_path('ar'));

@@ -68,7 +68,9 @@ class AgedReceivablesTotal extends Model
     */
 	protected $fillable = [
 		'salesorder_id',
-		'rep_id',
+        'rep_id',
+        'org_rep_id',
+        'org_rep_name',
 		'customer_id',
 		'sales_order',
 		'customer',

@@ -54,7 +54,7 @@
 			$odoo = $odoo->connect();
 			$invoice_lines = $odoo
 				->where('create_date', '>=', date('Y-m-d', strtotime($retrieve_from)))
-				//	->where('origin', '=', 'SO5447')
+				//	->where('origin', '=', 'SO12904')
 				//    ->where('id', '=', '1949')
 				//   ->where('partner_id', '=', '3196')
 				//	->where('create_date', '<=', date('Y-m-d', strtotime("-61 days")))
@@ -80,7 +80,7 @@
 					'uom_id'
 				)
 				->get('account.invoice.line');
-			//	   dd($invoice_lines);
+				//   dd($invoice_lines);
 			for ($i = 0; $i < count($invoice_lines); $i++) {
 
                 InvoiceLine::updateOrCreate(

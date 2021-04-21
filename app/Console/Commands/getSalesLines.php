@@ -102,7 +102,7 @@ class getSalesLines extends Command
         $code = '';
         $margin = 0;
 
-        SaleInvoice::where('order_date', '>=', date('Y-m-d', strtotime($retrieve_from)))->delete();
+     //   SaleInvoice::where('order_date', '>=', date('Y-m-d', strtotime($retrieve_from)))->delete();
 //dd("test");
 
         for ($i = 0; $i < count($order_lines); $i++) {
@@ -250,12 +250,14 @@ class getSalesLines extends Command
             $cat_sub3 = '';
             $cat_sub4 = '';
             $cat_sub5 = '';
-            $cats = explode('/', $si->product_category_full);
+            $cat_sub6 = '';
+            $cats = explode(' /', $si->product_category_full);
    //         $this->info("cat=" . $si->product_category_full);
 //dd($cats);
-            $cat_length = sizeof($cats);
+            $cat_length = count($cats);
+          //       if ($cat_length==6)dd($cats);
 
-            $this->info($cat_length);
+   //         $this->info($cat_length);
             if ($cat_length >= 1) {
                 $cat_sub1 = trim($cats[0]);
             }
@@ -271,6 +273,9 @@ class getSalesLines extends Command
             }
             if ($cat_length >= 5) {
                 $cat_sub5 = trim($cats[4]);
+            }
+            if ($cat_length >= 6) {
+                $cat_sub6 = trim($cats[5]);
             }
 
             SaleInvoice::where('id', $sid)
@@ -293,8 +298,8 @@ class getSalesLines extends Command
                     'cat_sub2' => $cat_sub2,
                     'cat_sub3' => $cat_sub3,
                     'cat_sub4' => $cat_sub4,
-                    'cat_sub5' => $cat_sub5
-
+                    'cat_sub5' => $cat_sub5,
+                    'cat_sub6' => $cat_sub6
                 ]);
             // }
         }

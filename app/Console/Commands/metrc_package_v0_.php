@@ -22,6 +22,7 @@ class metrc_packageV0 extends Command
     protected $signature = 'metrc:package';
 
     /**
+     *
      * The console command description.
      *
      * @var string
@@ -42,7 +43,6 @@ class metrc_packageV0 extends Command
     {
         $odoo = new \Edujugon\Laradoo\Odoo();
         $odoo = $odoo->connect();
-        //    for ($j = 1; $j <= 29; $j++) {
         $client = new Client([
             'base_uri' => "https://api-ca.metrc.com",
             'timeout' => 2.0,

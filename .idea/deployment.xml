@@ -2,21 +2,14 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="schedule2" remoteFilesAllowedToDisappearOnAutoupload="false" compareModeInSync="TEXT">
     <serverData>
-      <paths name="accounting.ozinc.info">
+      <paths name="driverlog3.ozinc.info">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="sales2">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="schedule.fairdistro.com">
+      <paths name="sales.ozinc.info">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

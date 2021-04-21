@@ -1,69 +1,81 @@
 <?php
 
-    namespace App\Console\Commands;
+namespace App\Console\Commands;
 
-    use App\AgedReceivablesTotal;
-    use App\Invoice;
-    use App\AgedReceivables;
-    use App\InvoiceAmtCollect;
-    use App\InvoiceLine;
-    use App\SaleInvoice;
-    use Carbon\Carbon;
-    use Illuminate\Console\Command;
-    use Illuminate\Support\Facades\DB;
+use App\AgedReceivablesTotal;
+use App\Invoice;
+use App\AgedReceivables;
+use App\InvoiceAmtCollect;
+use App\InvoiceLine;
+use App\SaleInvoice;
+use App\Customer;
+use Carbon\Carbon;
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 
-    class calcAgedReceivables extends Command
+class calcAgedReceivables extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'calc:ar';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Create Aged Invoices Table';
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        /**
-         * The name and signature of the console command.
-         *
-         * @var string
-         */
-        protected $signature = 'calc:ar';
+        parent::__construct();
+    }
 
-        /**
-         * The console command description.
-         *
-         * @var string
-         */
-        protected $description = 'Create Aged Invoices Table';
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
 
-        /**
-         * Create a new command instance.
-         *
-         * @return void
-         */
-        public function __construct()
-        {
-            parent::__construct();
-        }
-
-        /**
-         * Execute the console command.
-         *
-         * @return mixed
-         */
-        public function handle()
-        {
-
-            $customers = Invoice::select(DB::raw("
+        $customers = Invoice::select(DB::raw("
+                            *,
 							customer_id,
 							customer_name,
 							sales_person_id,
 							sum(residual) as sum_residual
 							"
-            ))
-     //           ->where('customer_id',1293)
-                ->groupBy('customer_id')
-                ->orderBy('customer_name')
-                ->get();
+        ))
+            ->where('type', "out_invoice")
+            ->groupBy('customer_id')
+            ->orderBy('customer_name')
+            ->get();
 
-            $data = [];
-            DB::table('aged_receivables')->truncate();
-            DB::table('aged_receivables_totals')->truncate();
+        $data = [];
+        DB::table('aged_receivables')->truncate();
+        DB::table('aged_receivables_totals')->truncate();
+        foreach ($customers as $customer) {
+            //  dd($customer);
+            //   $this->info($customer->customer_id);
+            $cust = Customer::where('ext_id', $customer->customer_id)->first();
+            if ($cust) {
+                $current_rep = $cust->user_id;
+                $current_rep_name = $cust->sales_person;
+            } else {
+                $current_rep = $customer->rep_id;
+                $current_rep_name = $customer->rep_name;
+            }
 
-            foreach ($customers as $customer) {
-                $invoices = Invoice::select(DB::raw("*,
+            $invoices = Invoice::select(DB::raw("*,
 							name,
 							invoices.id as invoice_id,
 							sales_person_id,
@@ -95,53 +107,59 @@
 								WHEN age IS NULL THEN 8
 							END as age_rank
 									"))
-                    ->orderBy('customer_name')
-                    ->orderBy('age_rank')
-                    ->where('customer_id', '=', $customer->customer_id)
-                    ->where('type', '=', 'out_invoice')
-                    ->where('residual', '!=', 0)
-                    ->get();
+                ->orderBy('customer_name')
+                ->orderBy('age_rank')
+                ->where('customer_id', '=', $customer->customer_id)
+                ->where('type', '=', 'out_invoice')
+                ->where('residual', '!=', 0)
+                ->get();
 
 //dd($invoices->toarray());
-                foreach ($invoices as $invoice) {
-                    $rank = [];
-                    for ($i = 0; $i < 9; $i++) {
-                        if ($i == $invoice->age_rank) {
-                            array_push($rank, $invoice->residual);
-                        } else {
-                            array_push($rank, '');
-                        }
+            foreach ($invoices as $invoice) {
+
+                $rank = [];
+                for ($i = 0; $i < 9; $i++) {
+                    if ($i == $invoice->age_rank) {
+                        array_push($rank, $invoice->residual);
+                    } else {
+                        array_push($rank, '');
                     }
-                    AgedReceivables::updateOrCreate(
-                        [
-                            'sales_order' => $invoice->sales_order
-                        ],
-                        [
-                            'rep' => $invoice->sales_person_name,
-                            'rep_id' => $invoice->sales_person_id,
-                            'customer' => $invoice->customer_name,
-                            'customer_id' => $invoice->customer_id,
-                            'sales_order' => $invoice->sales_order,
-                            'salesorder_id' => $invoice->ext_id,
-                            'residual' => $invoice->residual,
-                            'range0' => $rank[0],
-                            'range1' => $rank[1],
-                            'range2' => $rank[2],
-                            'range3' => $rank[3],
-                            'range4' => $rank[4],
-                            'range5' => $rank[5],
-                            'range6' => $rank[6],
-                            'range7' => $rank[7],
-                            'range8' => $rank[8]
-                        ]);
                 }
+
+                AgedReceivables::updateOrCreate(
+                    [
+                        'sales_order' => $invoice->sales_order
+                    ],
+                    [
+        //                'rep' => $current_rep_name, //$invoice->sales_person_name,
+         //               'rep_id' =>  $current_rep,
+                        'rep_id' =>   $invoice->sales_person_id,
+                        'rep' => $invoice->sales_person_name,
+                        'org_rep_id' => $invoice->sales_person_id,
+                        'org_rep_name' => $invoice->sales_person_name,
+                        'customer' => $invoice->customer_name,
+                        'customer_id' => $invoice->customer_id,
+                        'sales_order' => $invoice->sales_order,
+                        'salesorder_id' => $invoice->ext_id,
+                        'residual' => $invoice->residual,
+                        'range0' => $rank[0],
+                        'range1' => $rank[1],
+                        'range2' => $rank[2],
+                        'range3' => $rank[3],
+                        'range4' => $rank[4],
+                        'range5' => $rank[5],
+                        'range6' => $rank[6],
+                        'range7' => $rank[7],
+                        'range8' => $rank[8]
+                    ]);
             }
+        }
 
 
-            /*			calculate totals		*/
+        /*			calculate totals		*/
 
-            $totals = AgedReceivables::select(DB::raw(
-                "*,
+        $totals = AgedReceivables::select(DB::raw(
+            "*,
                 sum(range0) as sum_range0,
                 sum(range1) as sum_range1,
                 sum(range2) as sum_range2,
@@ -153,72 +171,81 @@
                 sum(range8) as sum_range8,
                 sum(residual) as sum_residual
 					"))
-                ->groupBy('customer_id')
-                ->get();
-            //		dd($totals->toArray());
-            foreach ($totals as $total) {
-                AgedReceivablesTotal::updateOrCreate(
-                    ['customer_id' => $total->customer_id],
-                    [
-                        'rep_id' => $total->rep_id,
-                        'customer' => $total->customer,
-                        'rep' => $total->rep,
-                        'residual' => $total->sum_residual,
-                        'range0' => $total->sum_range0,
-                        'range1' => $total->sum_range1,
-                        'range2' => $total->sum_range2,
-                        'range3' => $total->sum_range3,
-                        'range4' => $total->sum_range4,
-                        'range5' => $total->sum_range5,
-                        'range6' => $total->sum_range6,
-                        'range7' => $total->sum_range7,
-                        'range8' => $total->sum_range8,
-                        'customer_total' =>
-                            $total->sum_range0 +
-                            $total->sum_range1 +
-                            $total->sum_range2 +
-                            $total->sum_range3 +
-                            $total->sum_range4 +
-                            $total->sum_range5 +
-                            $total->sum_range6 +
-                            $total->sum_range7 +
-                            $total->sum_range8
-                    ]);
+            ->groupBy('customer_id')
+            ->get();
+        //		dd($totals->toArray());
+        foreach ($totals as $total) {
+/*            $current_rep = Customer::where('ext_id', $total->customer_id)->first();
+            if ($current_rep) {
+                $current_rep = $current_rep->user_id;
+            } else {
+                $current_rep = $customer->rep_id;
+            }*/
 
-            }
-            /*calculate collected receivables*/
+            AgedReceivablesTotal::updateOrCreate(
+                ['customer_id' => $total->customer_id],
+                [
+                    'rep_id' =>  $total->rep_id, //$current_rep,
+                    'rep' => $total->rep,
+                    'org_rep_id' => $total->org_rep_id,
+                    'org_rep_name' => $total->org_rep_name,
+                    'customer' => $total->customer,
+                    'residual' => $total->sum_residual,
+                    'range0' => $total->sum_range0,
+                    'range1' => $total->sum_range1,
+                    'range2' => $total->sum_range2,
+                    'range3' => $total->sum_range3,
+                    'range4' => $total->sum_range4,
+                    'range5' => $total->sum_range5,
+                    'range6' => $total->sum_range6,
+                    'range7' => $total->sum_range7,
+                    'range8' => $total->sum_range8,
+                    'customer_total' =>
+                        $total->sum_range0 +
+                        $total->sum_range1 +
+                        $total->sum_range2 +
+                        $total->sum_range3 +
+                        $total->sum_range4 +
+                        $total->sum_range5 +
+                        $total->sum_range6 +
+                        $total->sum_range7 +
+                        $total->sum_range8
+                ]);
 
-            $now = Carbon::now();
-            $year = $now->year;
-            $week = $now->weekOfYear;
+        }
+        /*calculate collected receivables*/
 
-            $year_week = $year . $week;
-            $year_week = (int)($year_week);
+        $now = Carbon::now();
+        $year = $now->year;
+        $week = $now->weekOfYear;
+
+        $year_week = $year . $week;
+        $year_week = (int)($year_week);
 
 
         //    echo $year_week;
 
-            $agedReceivablesTotals = AgedReceivablesTotal::all();
-            foreach ($agedReceivablesTotals as $agedReceivablesTotal) {
-                $amt_collect = InvoiceAmtCollect::where('customer_id', $agedReceivablesTotal->customer_id)
-                    ->where('week', '>=', $year_week)
-                    ->orderby('week', 'desc')
-                    ->first();
-                if ($amt_collect) {
+        $agedReceivablesTotals = AgedReceivablesTotal::all();
+        foreach ($agedReceivablesTotals as $agedReceivablesTotal) {
+            $amt_collect = InvoiceAmtCollect::where('customer_id', $agedReceivablesTotal->customer_id)
+                ->where('week', '>=', $year_week)
+                ->orderby('week', 'desc')
+                ->first();
+            if ($amt_collect) {
 
-                    $amount_collected = $amt_collect->saved_residual - $agedReceivablesTotal->customer_total;
+                $amount_collected = $amt_collect->saved_residual - $agedReceivablesTotal->customer_total;
 
-                    InvoiceAmtCollect::find($amt_collect->id)
-                        ->update([
-                            'amt_collected' => $amount_collected,
-                        ]);
-                }
+                InvoiceAmtCollect::find($amt_collect->id)
+                    ->update([
+                        'amt_collected' => $amount_collected,
+                    ]);
             }
-/*            \Artisan::call('scout:flush App\\\AgedReceivables');
-            \Artisan::call('scout:import App\\\AgedReceivables');
-            \Artisan::call('scout:flush App\\\AgedReceivablesTotal');
-            \Artisan::call('scout:import App\\\AgedReceivablesTotal');*/
-
-            $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
         }
+        /*            \Artisan::call('scout:flush App\\\AgedReceivables');
+                    \Artisan::call('scout:import App\\\AgedReceivables');
+                    \Artisan::call('scout:flush App\\\AgedReceivablesTotal');
+                    \Artisan::call('scout:import App\\\AgedReceivablesTotal');*/
+
+        $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
     }
+}

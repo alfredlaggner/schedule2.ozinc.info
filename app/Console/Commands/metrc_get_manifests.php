@@ -8,14 +8,14 @@ use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Console\Command;
 
-class metrc_items extends Command
+class metrc_get_manifests extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'metrc:items';
+    protected $signature = 'metrc:manifests';
 
     /**
      * The console command description.
@@ -51,18 +51,21 @@ class metrc_items extends Command
         ];
 
         $license = 'C11-0000224-LIC';
-        $new_package = '1A4060300003C35000019794';
 
-        $response = $client->request('GET', '/items/v1/active?licenseNumber=' . $license, $headers);
+        $yesterday = date("Y-m-d",strtotime("- 1 day"));
+        $today = date('Y-m-d');
+   //     dd($yesterday);
+        $response_string = '&lastModifiedStart=' . '2006-02-05T06:30:00Z&lastModifiedEnd=' .  '2008-03-05T07:30:59Z';
+
+        $response = $client->request('GET', '/transfers/v1/incoming?licenseNumber=' . $license . '&lastModifiedStart=' . $yesterday . 'T06:30:00Z&lastModifiedEnd=' . $today . 'T06:29:59Z', $headers);
         $items = json_decode($response->getBody()->getContents());
-    //    dd(($items));
+      $this->info(count($items)) ;
+        dd(($items));
 
 
         /*        $response = $client->request('GET', '/unitsofmeasure/v1/active?licenseNumber=' . $license, $headers);
                 $items = json_decode($response->getBody()->getContents());*/
 
-
-        dd(($items));
 
         MetrcItem::truncate();
         for ($i = 0; $i < count($items); $i++) {

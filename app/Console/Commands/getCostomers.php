@@ -76,7 +76,7 @@ class getCostomers extends Command
             'x_studio_field_Bwbev'
         )
             ->get('res.partner');
-        //   dd($customers);
+         //  dd($customers);
         for ($i = 0; $i < count($customers); $i++) {
 
             //   $this->info($customers[$i]['email']);
@@ -93,6 +93,7 @@ class getCostomers extends Command
                 [
                     'ext_id_contact' => $customers[$i]['id'],
                     'name' => preg_replace("/[^a-zA-Z0-9_\s]/", " ", $customers[$i]['display_name']),
+                    'display_name' => $customers[$i]['display_name'],
                     'street' => $customers[$i]['street'],
                     'street2' => $street2,
                     'city' => $customers[$i]['city'],
@@ -120,6 +121,7 @@ class getCostomers extends Command
 
                 ]);
         }
+     //   dd('customers');
         $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
 
     }

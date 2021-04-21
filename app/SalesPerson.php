@@ -42,4 +42,10 @@ class SalesPerson extends Model
 {
     protected $table = "sales_persons";
     protected $fillable = ['sales_person_id', 'email', 'name', 'phone_number', 'region','is_salesperson','is_ten_ninety'];
+
+    public function inactive_user()
+    {
+        return $this->hasOne(UserInactive::class, 'sales_person_id', 'sales_person_id');
+    }
+
 }

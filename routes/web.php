@@ -46,3 +46,15 @@ Route::get('span', 'TimespanController@so_time_span')->name('span');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('send-mail', function () {
+
+    $details = [
+        'title' => 'test Mail from Alfred.com',
+        'body' => 'finally'
+    ];
+
+    \Mail::to('alfred.laggner@gmail.com')->send(new \App\Mail\SendDueMessage($details));
+
+    dd("Email is Senty. Again");
+});

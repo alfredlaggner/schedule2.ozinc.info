@@ -52,12 +52,13 @@ class metrc_get_manifests extends Command
 
         $license = 'C11-0000224-LIC';
 
-        $yesterday = date("Y-m-d",strtotime("- 1 day"));
-        $today = date('Y-m-d');
+        $yesterday = date("Y-m-d",strtotime("- 5 day"));
+        $today = date("Y-m-d",strtotime("- 4 day"));
+     //   $today = date('Y-m-d');
    //     dd($yesterday);
         $response_string = '&lastModifiedStart=' . '2006-02-05T06:30:00Z&lastModifiedEnd=' .  '2008-03-05T07:30:59Z';
 
-        $response = $client->request('GET', '/transfers/v1/incoming?licenseNumber=' . $license . '&lastModifiedStart=' . $yesterday . 'T06:30:00Z&lastModifiedEnd=' . $today . 'T06:29:59Z', $headers);
+        $response = $client->request('GET', '/transfers/v1/outgoing?licenseNumber=' . $license . '&lastModifiedStart=' . $yesterday . 'T06:30:00Z&lastModifiedEnd=' . $today . 'T06:29:59Z', $headers);
         $items = json_decode($response->getBody()->getContents());
       $this->info(count($items)) ;
         dd(($items));

@@ -79,7 +79,7 @@ class send_inactive_reps extends Command
                     'x_studio_rep_inactive' => $q->is_not_active_rep
                 ]);
             $this->info($q->name . ' - ' . $q->invoice_date);
-            sleep(.5)
+            sleep(.5);
         }
 
     }

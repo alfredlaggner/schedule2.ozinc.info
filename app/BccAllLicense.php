@@ -32,7 +32,9 @@ class BccAllLicense extends Model
         "businessOwner",
         "website",
         "phone",
-        "email"
+        "email",
+        "territory",
+        "ozCustomer",
     ];
     protected $dates = [
         'updated_at',
@@ -43,6 +45,6 @@ class BccAllLicense extends Model
 
     public function isOzCustomer()
     {
-        return (hasOne(Customer::class, 'licenceNumber','licence'));
+        return (hasOne(Customer::class, 'licenceNumber', 'licence'));
     }
 }

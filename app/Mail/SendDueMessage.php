@@ -25,7 +25,7 @@ class SendDueMessage extends Mailable
 
     public function build()
     {
-        return $this->subject('Mail from Alfred for Test')
-            ->view('mail.InvoiceDue');
+        return $this->subject($this->details['order_number'] . 'is due')
+            ->view('mail.InvoiceDue', [$this->details['due']]);
     }
 }

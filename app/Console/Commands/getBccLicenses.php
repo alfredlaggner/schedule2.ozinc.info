@@ -56,7 +56,7 @@ class getBccLicenses extends Command
         $reason = $response->getReasonPhrase(); // OK
         foreach ($results as $result) {
             $short_zip = substr($result->premiseZip, 0, 5);
-            $this->info($short_zip);
+        //    $this->info($short_zip);
             BccAllLicense::updateOrCreate(
                     [
                         "licenseNumber" => $result->licenseNumber

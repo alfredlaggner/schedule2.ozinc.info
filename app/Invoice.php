@@ -50,4 +50,9 @@ class Invoice extends Model
         return $this->hasOne(UserInactive::class, 'sales_person_id', 'sales_person_id');
     }
 
+    public function due_reminder()
+    {
+        return $this->hasMany('App\InvoiceDueReminder');
+    }
+
 }

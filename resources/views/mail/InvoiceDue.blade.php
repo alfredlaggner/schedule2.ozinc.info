@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ItsolutionStuff.com</title>
+    <title>Your Invoice is due!</title>
 </head>
 <body>
-<h1>{{ $details['title'] }}</h1>
-<p>{{ $details['body'] }}</p>
+<h1>{{ $details['invoice'] }}</h1>
+<p>{{ $details['due'] }}</p>
 
 <p>Thank you</p>
 </body>

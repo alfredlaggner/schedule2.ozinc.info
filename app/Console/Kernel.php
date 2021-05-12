@@ -132,6 +132,10 @@ class Kernel extends ConsoleKernel
         $schedule->command('metrc:package1')->daily()->appendOutputTo(storage_path('metrc_package.log'));
         $schedule->command('metrc:items')->hourly()->appendOutputTo(storage_path('metrc_items.log'));
         $schedule->command('metrc:strains')->hourly()->appendOutputTo(storage_path('metrc_strains.log'));
+  //bcc
+        $schedule->command('bcc:licenses')->daily()->appendOutputTo(storage_path('bbcLicenses.log'));
+        $schedule->command('send:due_message')->daily()->appendOutputTo(storage_path('calcDueMessages.log'));
+
      //   $schedule->command('metrc:update_tags')->hourly()->appendOutputTo(storage_path('package.log'));
       //  $schedule->command('calc:ten_ninety')->daily()->appendOutputTo(storage_path('ten_ninety.log'));
         $schedule->command('backup:run')->daily();

@@ -19,7 +19,7 @@ class getStockMoves extends Command
      *
      * @var string
      */
-    protected $description = 'Gets stock moves';
+    protected $description = 'Gets stock move lines';
 
     /**
      * Create a new command instance.

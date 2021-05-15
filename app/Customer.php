@@ -37,6 +37,8 @@ class Customer extends Model
         'license_type',
         'bcc_business_name',
         'territory',
+        'term_id',
+        'term_name',
     ];
 
     public function saleinvoices()

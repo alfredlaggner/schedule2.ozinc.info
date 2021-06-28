@@ -69,7 +69,8 @@ class metrc_package extends Command
 
         $today = Carbon::today()->toDateString();
         $yesterday = Carbon::now()->subDays(1)->toDateString();
-        for ($j = 0; $j <= 500; $j++) {
+
+        for ($j = 0; $j <= 365; $j++) {
             $today = Carbon::today()->subDays($j)->toDateString();
             $yesterday = Carbon::now()->subDays($j + 1)->toDateString();
             //$this->info("yesterday= " . $yesterday . "today= " . $today);
@@ -79,17 +80,18 @@ class metrc_package extends Command
             //   $this->info($response_string);
             $response = $client->request('GET', '/packages/v1/active?licenseNumber=' . $license . $response_string, $headers);
             $packages = json_decode($response->getBody()->getContents());
-                    dd($packages);
-            // $this->info(count($packages));
-
+       //     dd($packages[$j]->Item->Name);
+      //             dd($packages);
+  //           $this->info(count($packages));
+//die();
             //     DB::table('metrc_packages');
 
             for ($i = 0; $i < count($packages); $i++) {
-                //     $this->info($packages[$i]->ProductName);
+                     $this->info($packages[$i]->Item->Name);
 
                 $product_id = 0;
                 $ref = '';
-                $product_name = $packages[$i]->ProductName;
+                $product_name = $packages[$i]->Item->Name;
                 //       $products = Product::whereRaw('LOWER(`name`) LIKE ? ', [trim($product_name) . '%'])->first();
 
                 $products = Product::where('name', 'LIKE', $product_name)->first();
@@ -110,11 +112,11 @@ class metrc_package extends Command
                     ['ext_id' => $packages[$i]->Id],
                     [
                         'tag' => $packages[$i]->Label,
-                        'item' => $packages[$i]->ProductName,
+                        'item' => $packages[$i]->Item->Name,
                         'product_id' => $product_id,
                         'ref' => $ref,
-                        'category' => $packages[$i]->ProductCategoryName,
-                        'item_strain' => $packages[$i]->ItemStrainName,
+                        'category' => $packages[$i]->Item->ProductCategoryName,
+                        'item_strain' => $packages[$i]->Item->StrainName,
                         'quantity' => $packages[$i]->Quantity,
                         'uom' => $packages[$i]->UnitOfMeasureName,
                         'lab_testing' => $packages[$i]->InitialLabTestingState,
@@ -124,9 +126,12 @@ class metrc_package extends Command
                 $user = Package::where('quantity', '<=', 0);
                 $user->delete();
             }
+            $packages = '';
             //  $this->update_odoo();
             $this->mark_used_tags();
-            sleep(4);
+            sleep(2);
+            $this->info($today);
+            $this->info($j);
         }
         $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
     }

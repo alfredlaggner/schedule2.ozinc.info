@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class InvoiceDueReminder extends Model
 {
     protected $fillable = ['invoice_id',
-        'sent_date', 'days_due', 'message_id','comments'
+        'sent_date', 'days_due', 'message_id','comments','due_date',
     ];
 
     public function invoice(){

@@ -11,6 +11,7 @@ use App\Invoice;
 use App\User;
 use Carbon\Carbon;
 use App\Notifications\InvoiceDue;
+
 class getAccountingSalesOrders extends Command
 {
     /**
@@ -48,6 +49,7 @@ class getAccountingSalesOrders extends Command
         $odoo = new \Edujugon\Laradoo\Odoo();
         $odoo = $odoo->connect();
         $orders = $odoo
+         //   ->limit(10)
             //			      ->where('origin','=','SO5383')
             ->fields(
                 'id',
@@ -72,9 +74,11 @@ class getAccountingSalesOrders extends Command
                 'amount_tax',
                 'amount_untaxed',
                 'has_outstanding',
-                'residual'
+                'residual',
+                'payment_term_id'
             )
             ->get('account.invoice');
+        //   dd($orders);
         for ($i = 0; $i < count($orders); $i++) {
 
             if ($orders[$i]['date_invoice'] == '0000-00-00') {
@@ -108,18 +112,23 @@ class getAccountingSalesOrders extends Command
                     'sales_order' => $orders[$i]['origin'],
                     'amount_untaxed' => $orders[$i]['amount_untaxed'],
                     'amount_tax' => $orders[$i]['amount_total'] - $orders[$i]['amount_untaxed'],
-                   	'type' => $orders[$i]['type'],
+                    'type' => $orders[$i]['type'],
                     'amount_total' => $orders[$i]['amount_total'],
                     'amount_untaxed_signed' => $orders[$i]['amount_untaxed_signed'],
                     'has_outstanding' => $orders[$i]['has_outstanding'],
                     'residual' => $orders[$i]['residual'],
+                    'payment_term_id' => $orders[$i]['payment_term_id'][0],
+                    'payment_term_name' => $orders[$i]['payment_term_id'][1],
                     'age' => $age
                 ]
             );
 
         }
-
-        // keep only last version of multiple salesorders
+        $invoices = Invoice::join('customers', 'customers.ext_id', '=', 'invoices.customer_id')
+            ->update([
+                'payment_term_id' => DB::raw('customers.term_id'),
+                'payment_term_name' => DB::raw('customers.term_name'),
+            ]);
 
         Schema::dropIfExists('invoices_unique');
 
@@ -128,7 +137,7 @@ class getAccountingSalesOrders extends Command
 						ext_id, name, sales_order, invoice_date, state, amount_tax) select ext_id, name, sales_order, max(invoice_date), state, amount_tax  from invoices
 						group by sales_order, sales_person_id');
 
-		$this->info(date_format(date_create(), 'Y-m-d H:i:s'));
+        $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
 
     }
 }

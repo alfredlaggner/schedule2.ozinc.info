@@ -34,5 +34,5 @@ use Illuminate\Database\Eloquent\Model;
  */
 class StockPicking extends Model
 {
-    protected $fillable = ['ext_id','name','date','state','date_done','salesorder_number','product_id','product_name'];
+    protected $fillable = ['ext_id','name','date','scheduled_date','state','activity_state','date_done','salesorder_number','product_id','partner_id','product_name'];
 }

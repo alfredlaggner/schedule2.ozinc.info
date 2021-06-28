@@ -62,7 +62,7 @@ class metrc_items extends Command
                 $items = json_decode($response->getBody()->getContents());*/
 
 
-        dd(($items));
+     //   dd(($items));
 
         MetrcItem::truncate();
         for ($i = 0; $i < count($items); $i++) {

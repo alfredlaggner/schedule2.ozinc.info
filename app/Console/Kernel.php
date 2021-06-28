@@ -70,7 +70,7 @@ class Kernel extends ConsoleKernel
         'App\Console\Commands\send_inactive_reps',
         'App\Console\Commands\sendCollectionUser',
         'App\Console\Commands\getBccLicenses',
-
+        'App\Console\Commands\pushNoTermCustomers',
     ];
 
 	protected function scheduleTimezone()
@@ -93,7 +93,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('odoo:images')->daily()->withoutOverlapping()->appendOutputTo(storage_path('images.log'));
 		$schedule->command('odoo:housekeeping')->hourly()->withoutOverlapping()->appendOutputTo(storage_path('housekeeping.log'));
 
-        $schedule->command('odoo:salesorder')->everyFiveMinutes()->withoutOverlapping()->appendOutputTo(storage_path('salesorder.log'));
+        $schedule->command('odoo:salesorder')->hourly()->withoutOverlapping()->appendOutputTo(storage_path('salesorder.log'));
 
         $schedule->command('odoo:saleslines /-1/ day')->hourly()->runInBackground()->withoutOverlapping()->appendOutputTo(storage_path('saleslines_minute.log'));
        $schedule->command('odoo:saleslines /-6/ months')
@@ -101,7 +101,7 @@ class Kernel extends ConsoleKernel
 			->runInBackground()->appendOutputTo(storage_path('saleslines_daily.log'));
 
 
-        $schedule->command('odoo:invoice_lines /-1/ day')->everyMinute()->withoutOverlapping()->appendOutputTo(storage_path('invoice_lines_minute.log'));
+        $schedule->command('odoo:invoice_lines /-1/ day')->hourly()->withoutOverlapping()->appendOutputTo(storage_path('invoice_lines_minute.log'));
         $schedule->command('odoo:invoice_lines /-6/ months')
             ->daily()->withoutOverlapping()
 			->runInBackground()->appendOutputTo(storage_path('invoice_lines_daily.log'));
@@ -113,7 +113,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('calc:lastsku')->everyMinute()->appendOutputTo(storage_path('lastSku.log'));
         $schedule->command('odoo:margin')->daily()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('margin.log'));
-        $schedule->command('odoo:products')->everyFiveMinutes()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('product.log'));
+        $schedule->command('odoo:products')->hourly()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('product.log'));
         $schedule->command('odoo:productproducts')->daily()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('productproduct.log'));
         $schedule->command('odoo:salespersons')->daily()->appendOutputTo(storage_path('salesperson.log'));
         $schedule->command('odoo:customers')->daily()->appendOutputTo(storage_path('customers.log'));
@@ -123,15 +123,15 @@ class Kernel extends ConsoleKernel
         $schedule->command('calc:paid_commissions')->daily()->appendOutputTo(storage_path('paid_commissions.log'));
         $schedule->command('calc:ten_ninety_bi')->daily()->appendOutputTo(storage_path('ten_ninety_bi.log'));
         $schedule->command('odoo:invoices')->hourly()->withoutOverlapping()->appendOutputTo(storage_path('invoices.log'));
-        $schedule->command('set:inactive_users')->hourly()->appendOutputTo(storage_path('ar.log'));
+        $schedule->command('set:inactive_users')->daily()->appendOutputTo(storage_path('ar.log'));
         $schedule->command('calc:ar')->hourly()->appendOutputTo(storage_path('set_inactive.log'));
-        $schedule->command('odoo:payments')->hourly()->appendOutputTo(storage_path('payments.log'));
+        $schedule->command('odoo:payments')->daily()->appendOutputTo(storage_path('payments.log'));
         $schedule->command('odoo:payments_AR')->daily()->appendOutputTo(storage_path('payments.log'));
 		$schedule->command('calc:ar_to_collect')->weeklyOn(1, '6:00')->appendOutputTo(storage_path('ar'));
         $schedule->command('tntsearch:import App\\AgedReceivablesTotals')->daily()->appendOutputTo(storage_path('tntsearch'));
         $schedule->command('metrc:package1')->daily()->appendOutputTo(storage_path('metrc_package.log'));
-        $schedule->command('metrc:items')->hourly()->appendOutputTo(storage_path('metrc_items.log'));
-        $schedule->command('metrc:strains')->hourly()->appendOutputTo(storage_path('metrc_strains.log'));
+        $schedule->command('metrc:items')->daily()->appendOutputTo(storage_path('metrc_items.log'));
+        $schedule->command('metrc:strains')->daily()->appendOutputTo(storage_path('metrc_strains.log'));
   //bcc
         $schedule->command('bcc:licenses')->daily()->appendOutputTo(storage_path('bbcLicenses.log'));
         $schedule->command('send:due_message')->daily()->appendOutputTo(storage_path('calcDueMessages.log'));

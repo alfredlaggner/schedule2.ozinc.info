@@ -33,6 +33,8 @@ class Invoice extends Model
         'payment_date',
         'payment_amount',
         'payment_invoice_id',
+        'payment_term_id',
+        'payment_term_name'
     ];
 
     public function user()

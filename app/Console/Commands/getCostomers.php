@@ -46,7 +46,8 @@ class getCostomers extends Command
 
                 $id = $odoo->create('res.partner',['name' => 'John Odoo']);*/
 
-        $customers = $odoo->fields(
+        $customers = $odoo
+            ->fields(
             'id',
             'is_company',
             'display_name',
@@ -64,6 +65,7 @@ class getCostomers extends Command
             'total_overdue',
             'partner_latitude',
             'partner_longitude',
+            'property_payment_term_id',
             'x_studio_field_mu5dT',
             'x_studio_field_WzUo6',
             'x_studio_field_DN9mZ',
@@ -76,7 +78,7 @@ class getCostomers extends Command
             'x_studio_field_Bwbev'
         )
             ->get('res.partner');
-         //  dd($customers);
+      //    dd($customers);
         for ($i = 0; $i < count($customers); $i++) {
 
             //   $this->info($customers[$i]['email']);
@@ -118,7 +120,8 @@ class getCostomers extends Command
 
                     'total_due' => $customers[$i]['total_due'],
                     'total_overdue' => $customers[$i]['total_overdue'],
-
+                    'term_id' => $customers[$i]['property_payment_term_id'][0],
+                    'term_name' => $customers[$i]['property_payment_term_id'][1],
                 ]);
         }
      //   dd('customers');

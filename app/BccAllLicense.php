@@ -35,6 +35,7 @@ class BccAllLicense extends Model
         "email",
         "territory",
         "ozCustomer",
+        'customer_id'
     ];
     protected $dates = [
         'updated_at',

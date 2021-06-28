@@ -42,10 +42,10 @@ class sendMessageonDueDate extends Command
      */
     public function handle()
     {
-      //  $today = date("Y/m/d");
+        //  $today = date("Y/m/d");
         $today = Carbon::now();
-     //   $today = Carbon::now()->addDays(5);
-        $recent = Date('y:m:d', strtotime('-30 days'));
+        //   $today = Carbon::now()->addDays(5);
+        $recent = Date('y:m:d', strtotime('-3 years'));
         $invoices = Invoice::where('type', 'out_invoice')
             ->where('state', 'open')
             ->whereBetween('due_date', [$recent, $today])
@@ -55,8 +55,7 @@ class sendMessageonDueDate extends Command
         $message_id = 0;
         foreach ($invoices as $invoice) {
 
-            $now = Carbon::now();
-            $now = Carbon::now();
+            $now = Carbon::now()->subDay();
 
             $days_due = $now->diffInDays($invoice->due_date);
 
@@ -70,7 +69,11 @@ class sendMessageonDueDate extends Command
                 }
                 $this->info("Message Number:" . $message_number);
                 $message_id = InvoiceDueMessage::where('reminder', $message_number)->value('id');
-                $message_text = InvoiceDueMessage::where('reminder', $message_number)->value('text');
+                if ($message_number > 5) {
+                    $message_text = "Very old";
+                } else {
+                    $message_text = InvoiceDueMessage::where('reminder', $message_number)->value('text');
+                }
                 $this->info("Message Id: " . $message_text);
 
                 InvoiceDueReminder::updateOrcreate(
@@ -80,22 +83,21 @@ class sendMessageonDueDate extends Command
                         'message_id' => $message_id,
                         'comments' => $message_text,
                         'days_due' => $days_due,
-
+                        'due_date' => $invoice->due_date,
                     ]
                 );
-
-            }
-            else {
+            } else {
                 InvoiceDueReminder::updateOrcreate(
-                ['invoice_id' => $invoice->id],
-                [
-                    'sent_date' => Carbon::parse('0000-00-00 0:0:0')->format('Y-m-d'),
-                    'days_due' => $days_due,
-                    'comments' => '',
-                ]
-            );}
+                    ['invoice_id' => $invoice->id],
+                    [
+                        'sent_date' => Carbon::parse('0000-00-00 0:0:0')->format('Y-m-d'),
+                        'days_due' => $days_due,
+                        'comments' => '',
+                        'due_date' => $invoice->due_date,
+                    ]
+                );
+            }
         }
-
         return 0;
     }
 }

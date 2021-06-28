@@ -45,14 +45,19 @@ class getSalesOrders extends Command
         $orders = $odoo
             //->where( 'create_date', '>=',  date('Y-m-d', strtotime("-999 days")))
       //       ->where('id', '=', 13144)
-          //  ->limit(10)
+       //     ->limit(10)
             ->fields(
                 'id',
                 'state',
+                'name',
                 'display_name',
                 'date_order',
+            //    'expected_date',
+           //     'effective_date',
+                'payment_term_id',
                 'create_date',
                 'confirmation_date',
+                'payment_term_id',
                 'partner_id',
                 'user_id',
                 'margin',
@@ -65,11 +70,13 @@ class getSalesOrders extends Command
                 'activity_state'
             )
             ->get('sale.order');
-    //    dd($orders);
+   //   dd($orders);
         for ($i = 0; $i < count($orders); $i++) {
             $order_date = ($orders[$i]['date_order'] == true) ? date_format(date_create($orders[$i]['date_order']), "Y-m-d") : NULL;
             $order_date_stamped = ($orders[$i]['date_order'] == true) ? date_format(date_create($orders[$i]['date_order']), "Y-m-d H:i:s") : NULL;
             $create_date = ($orders[$i]['create_date'] == true) ? date_format(date_create($orders[$i]['create_date']), "Y-m-d") : NULL;
+       //     $effective_date = ($orders[$i]['effective_date'] == true) ? date_format(date_create($orders[$i]['effective_date']), "Y-m-d") : NULL;
+       //     $expected_date = ($orders[$i]['expected_date'] == true) ? date_format(date_create($orders[$i]['expected_date']), "Y-m-d") : NULL;
             $write_date = ($orders[$i]['write_date'] == true) ? date_format(date_create($orders[$i]['write_date']), "Y-m-d") : NULL;
             $confirmation_date = ($orders[$i]['confirmation_date'] == true) ? date_format(date_create($orders[$i]['confirmation_date']), "Y-m-d H:i:s") : NULL;
             SalesOrder:: updateOrCreate(
@@ -78,7 +85,10 @@ class getSalesOrders extends Command
                     'sales_order' => $orders[$i]['display_name'],
                     'state' => $orders[$i]['state'],
                     'create_date' => $create_date,
+               //     'effective_date' => $effective_date,
                     'order_date' => $order_date,
+              //      'expected_date' => $expected_date,
+                    'payment_term_id' => $orders[$i]['payment_term_id'][0],
                     'order_date_stamped' => $order_date_stamped,
                     'confirmation_date' => $confirmation_date,
                     'write_date' => $order_date,
@@ -93,6 +103,7 @@ class getSalesOrders extends Command
                     'amount_untaxed' => $orders[$i]['amount_untaxed'],
                 ]
             );
+          //  $this->info($i);
         }
         $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
 

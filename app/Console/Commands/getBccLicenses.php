@@ -43,7 +43,6 @@ class getBccLicenses extends Command
     {
 
 
-
         $response = Http::withHeaders([
             'Accept' => '*/*',
             'app_id' => "979eb638",
@@ -56,38 +55,38 @@ class getBccLicenses extends Command
         $reason = $response->getReasonPhrase(); // OK
         foreach ($results as $result) {
             $short_zip = substr($result->premiseZip, 0, 5);
-        //    $this->info($short_zip);
+            //    $this->info($short_zip);
             BccAllLicense::updateOrCreate(
-                    [
-                        "licenseNumber" => $result->licenseNumber
-                    ],
-                    [
-                        "licenseType" => $result->licenseType,
-                        "issuedDate" => $result->issuedDate,
-                        "addressLine1" => $result->addressLine1,
-                        "addressLine2" => $result->addressLine2,
-                        "premiseCity" => $result->premiseCity,
-                        "premiseState" => $result->premiseState,
-                        "premiseZip" => $short_zip,
-                        "premiseCounty" => $result->premiseCounty,
-                        "licenseStatus" => $result->licenseStatus,
-                        "businessStructure" => $result->businessStructure,
-                        "medicinal" => $result->medicinal == 'NO' ? false : true,
-                        "adultUse" => $result->adultUse == 'NO' ? false : true,
-                        "microActivityRetailerNonStorefront" => $result->microActivityRetailerNonStorefront,
-                        "microActivityRetailer" => $result->microActivityRetailer,
-                        "microActivityDistributor" => $result->microActivityDistributor,
-                        "microActivityDistributorTransportOnly" => $result->microActivityDistributorTransportOnly,
-                        "microActivityLevel1Manufacturer" => $result->microActivityLevel1Manufacturer,
-                        "microActivityCultivator" => $result->microActivityCultivator,
-                        "expiryDate" => $result->expiryDate,
-                        "businessName" => $result->businessName,
-                        "businessDBA" => $result->businessDBA,
-                        "businessOwner" => $result->businessOwner,
-                        "website" => $result->website,
-                        "phone" => $result->phone,
-                        "email" => $result->email,
-                    ]);
+                [
+                    "licenseNumber" => $result->licenseNumber
+                ],
+                [
+                    "licenseType" => $result->licenseType,
+                    "issuedDate" => $result->issuedDate,
+                    "addressLine1" => $result->addressLine1,
+                    "addressLine2" => $result->addressLine2,
+                    "premiseCity" => $result->premiseCity,
+                    "premiseState" => $result->premiseState,
+                    "premiseZip" => $short_zip,
+                    "premiseCounty" => $result->premiseCounty,
+                    "licenseStatus" => $result->licenseStatus,
+                    "businessStructure" => $result->businessStructure,
+                    "medicinal" => $result->medicinal == 'NO' ? false : true,
+                    "adultUse" => $result->adultUse == 'NO' ? false : true,
+                    "microActivityRetailerNonStorefront" => $result->microActivityRetailerNonStorefront,
+                    "microActivityRetailer" => $result->microActivityRetailer,
+                    "microActivityDistributor" => $result->microActivityDistributor,
+                    "microActivityDistributorTransportOnly" => $result->microActivityDistributorTransportOnly,
+                    "microActivityLevel1Manufacturer" => $result->microActivityLevel1Manufacturer,
+                    "microActivityCultivator" => $result->microActivityCultivator,
+                    "expiryDate" => $result->expiryDate,
+                    "businessName" => $result->businessName,
+                    "businessDBA" => $result->businessDBA,
+                    "businessOwner" => $result->businessOwner,
+                    "website" => $result->website,
+                    "phone" => $result->phone,
+                    "email" => $result->email,
+                ]);
 
 
         }
@@ -100,12 +99,13 @@ class getBccLicenses extends Command
             ->leftJoin('bcc_zip_to_regions', 'bcc_zip_to_regions.zip', '=', "bcc_all_licenses.premiseZip")
             ->update([
                 'bcc_all_licenses.territory' => \DB::raw("bcc_zip_to_regions.territory"),
-                'bcc_all_licenses.ozCustomer'  =>  \DB::raw(' CASE WHEN customers.license IS NULL THEN 0 ELSE 1 END')
+                'bcc_all_licenses.ozCustomer' => \DB::raw(' CASE WHEN customers.license IS NULL THEN 0 ELSE 1 END'),
+                'bcc_all_licenses.customer_id' => \DB::raw('customers.ext_id')
             ]);
 
-   //     dd("xxx");
+        //     dd("xxx");
 
-          $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
+        $this->info(date_format(date_create(), 'Y-m-d H:i:s'));
         return 0;
     }
 }

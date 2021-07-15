@@ -42,12 +42,13 @@ class getProductProduct extends Command
 
         $products = $odoo
             //      ->limit(5)
-            //       ->where('id', '=', 700)
+             //      ->where('sale_ok', '=', true)
             ->fields(
                 'id',
                 'default_code',
                 'barcode',
                 'active',
+                'sale_ok',
                 'display_name',
                 'name',
                 'product_id',
@@ -68,7 +69,7 @@ class getProductProduct extends Command
                 'weight'
             )
             ->get('product.product');
-
+//dd($products);
         //    \DB::table('products')->delete();
 
         for ($i = 0; $i < count($products); $i++) {
@@ -134,6 +135,7 @@ class getProductProduct extends Command
                     'uom' => $products[$i]['x_studio_unit_size_unit'],
                     'unit_size' => $products[$i]['x_studio_unit_size_temp'],
                     'case_qty' => $products[$i]['x_studio_case_qty'],
+                    'is_sellable' => $products[$i]['sale_ok'],
                 ]
             );
             if ($products[$i]['active'] == 0) $this->info("not active!");

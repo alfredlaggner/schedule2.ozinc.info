@@ -114,7 +114,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('calc:lastsku')->everyMinute()->appendOutputTo(storage_path('lastSku.log'));
         $schedule->command('odoo:margin')->daily()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('margin.log'));
         $schedule->command('odoo:products')->hourly()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('product.log'));
-        $schedule->command('odoo:productproducts')->daily()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('productproduct.log'));
+        $schedule->command('odoo:productproducts')->hourly()->withoutOverlapping()->runInBackground()->appendOutputTo(storage_path('productproduct.log'));
         $schedule->command('odoo:salespersons')->daily()->appendOutputTo(storage_path('salesperson.log'));
         $schedule->command('odoo:customers')->daily()->appendOutputTo(storage_path('customers.log'));
         $schedule->command('odoo:getstock')->daily()->appendOutputTo(storage_path('getstock.log'));

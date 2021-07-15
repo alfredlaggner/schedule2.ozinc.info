@@ -50,6 +50,7 @@ class getCostomers extends Command
             ->fields(
             'id',
             'is_company',
+            'customer',
             'display_name',
             'name',
             'street',
@@ -122,6 +123,8 @@ class getCostomers extends Command
                     'total_overdue' => $customers[$i]['total_overdue'],
                     'term_id' => $customers[$i]['property_payment_term_id'][0],
                     'term_name' => $customers[$i]['property_payment_term_id'][1],
+                    'is_company' => $customers[$i]['is_company'],
+                    'is_customer' => $customers[$i]['customer'],
                 ]);
         }
      //   dd('customers');

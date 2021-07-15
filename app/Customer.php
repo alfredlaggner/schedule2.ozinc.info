@@ -39,6 +39,8 @@ class Customer extends Model
         'territory',
         'term_id',
         'term_name',
+        'is_customer',
+        'is_company'
     ];
 
     public function saleinvoices()

@@ -33,7 +33,8 @@ class ProductProduct extends Model
         'weight',
         'uom',
         'unit_size',
-        'case_qty'
+        'case_qty',
+        'is_sellable',
     ];
     //
 }

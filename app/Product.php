@@ -92,6 +92,7 @@ class Product extends Model
         'outgoing_qty',
         'weight',
         'uom',
-        'unit_size'
+        'is_sellable',
+        'unit_size',
     ];
 }

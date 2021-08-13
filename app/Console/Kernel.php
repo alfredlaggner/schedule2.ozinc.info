@@ -71,6 +71,8 @@ class Kernel extends ConsoleKernel
         'App\Console\Commands\sendCollectionUser',
         'App\Console\Commands\getBccLicenses',
         'App\Console\Commands\pushNoTermCustomers',
+        'App\Console\Commands\getStockInventory',
+        'App\Console\Commands\getStockInventoryLine',
     ];
 
 	protected function scheduleTimezone()
@@ -135,6 +137,8 @@ class Kernel extends ConsoleKernel
   //bcc
         $schedule->command('bcc:licenses')->daily()->appendOutputTo(storage_path('bbcLicenses.log'));
         $schedule->command('send:due_message')->daily()->appendOutputTo(storage_path('calcDueMessages.log'));
+        $schedule->command('odoo:stock_inventory')->daily()->appendOutputTo(storage_path('stock_inventory.log'));
+        $schedule->command('odoo:stock_inventory_line')->daily()->appendOutputTo(storage_path('stock_inventory_line.log'));
 
      //   $schedule->command('metrc:update_tags')->hourly()->appendOutputTo(storage_path('package.log'));
       //  $schedule->command('calc:ten_ninety')->daily()->appendOutputTo(storage_path('ten_ninety.log'));
